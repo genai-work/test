@@ -1,0 +1,315 @@
+.examsPage {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
+
+.pageHeader {
+  background-color: rgb(23, 23, 23);
+  border-top: 5px solid rgb(56, 64, 69);
+  border-bottom: 5px solid rgb(204, 204, 204);
+  margin-bottom: 11px;
+  min-height: 50px;
+  max-height: 80px;
+  position: relative;
+  text-align: left;
+}
+
+.headerContainer {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: left;
+}
+
+.headerContent {
+  margin-left: -15px;
+  margin-right: -15px;
+  text-align: left;
+}
+
+.titleWrapper {
+  float: left;
+  width: 100%;
+  padding: 0 15px;
+  min-height: 1px;
+  position: relative;
+  text-align: left;
+}
+
+.pageTitle {
+  border-bottom: 5px solid rgb(0, 136, 204);
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  font-size: 36.4px;
+  font-weight: 200;
+  letter-spacing: -1px;
+  line-height: 46px;
+  margin-bottom: -25px;
+  min-height: 37px;
+  padding-bottom: 17px;
+  position: relative;
+  text-align: left;
+}
+
+.breadcrumbWrapper {
+  float: left;
+  width: 100%;
+  padding: 0 15px;
+  min-height: 1px;
+  position: relative;
+  text-align: left;
+}
+
+.breadcrumb {
+  border-radius: 4px;
+  margin-top: -3px;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbItem {
+  display: inline-block;
+  line-height: 24px;
+  text-align: left;
+
+  &::after {
+    content: ' / ';
+    margin: 0 8px;
+  }
+
+  &:last-child::after {
+    content: '';
+    margin: 0;
+  }
+}
+
+.breadcrumbLink {
+  color: rgb(0, 136, 204);
+  text-decoration: none;
+  line-height: 24px;
+  cursor: pointer;
+  display: inline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.mainContent {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.contentContainer {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  color: rgb(14, 14, 14);
+  font-size: 30.8px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: 42px;
+  margin-bottom: 32px;
+
+  strong {
+    font-weight: 700;
+    display: inline;
+  }
+}
+
+.introSection {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.introText {
+  float: left;
+  width: 100%;
+  padding: 0 15px;
+  min-height: 1px;
+  position: relative;
+
+  p {
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 29.4px;
+    margin-bottom: 20px;
+  }
+
+  em {
+    font-style: italic;
+  }
+}
+
+.introButton {
+  display: none;
+  float: left;
+  width: 16.6667%;
+  padding: 0 15px;
+  min-height: 1px;
+  position: relative;
+}
+
+.sampleButton {
+  background-color: rgb(0, 198, 98);
+  border: 1px solid rgb(0, 198, 98);
+  border-radius: 6px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 23.94px;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px -1px 0px;
+  white-space: nowrap;
+  user-select: none;
+  touch-action: manipulation;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.divider {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+  border: none;
+  color: rgb(128, 128, 128);
+  height: 1px;
+  margin: 22px 0;
+}
+
+.dividerLarge {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+  border: none;
+  color: rgb(128, 128, 128);
+  height: 1px;
+  margin: 44px 0;
+}
+
+.examsGrid {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.examCard {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+  min-height: 1px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.examCardInner {
+  background: linear-gradient(rgb(255, 255, 255) 1%, rgb(249, 249, 249) 98%);
+  background-position: 0 0;
+  border: 1px solid rgb(223, 223, 223);
+  border-left-color: rgb(236, 236, 236);
+  border-right-color: rgb(236, 236, 236);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 1px 0px;
+  min-height: 100px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.examCardContent {
+  border-top: 4px solid rgb(0, 136, 204);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+
+  .examCard:first-child & {
+    border-top-color: rgb(227, 97, 89);
+  }
+}
+
+.examTitle {
+  color: rgb(0, 136, 204);
+  font-size: 18.2px;
+  letter-spacing: -0.7px;
+  line-height: 27px;
+  margin-bottom: 14px;
+  margin-top: 5px;
+  text-align: center;
+  text-transform: uppercase;
+
+  .examCard:first-child & {
+    color: rgb(227, 97, 89);
+  }
+}
+
+.examDescription {
+  line-height: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.learnMoreLink {
+  color: rgb(0, 136, 204);
+  text-decoration: none;
+  line-height: 24px;
+  margin-top: 10px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.arrowIcon {
+  display: inline-block;
+  margin-left: 4px;
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .examCard {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .pageTitle {
+    font-size: 24px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .introText p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .examCardContent {
+    padding: 20px;
+  }
+}
