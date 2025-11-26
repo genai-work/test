@@ -171,7 +171,7 @@ export default function ContactPage() {
 
             <div className={styles.separator}></div>
 
-            <h4 className="section-subheading">The <strong>Office</strong></h4>
+            <h4 className={styles['section-subheading']}>The <strong>Office</strong></h4>
             <div className={styles['office-info']}>
               <svg width="8" height="13" viewBox="0 0 8 13" fill="none">
                 <path d="M5.00281 5.84185C5.00281 5.84185 5.09176 5.75291 5.26964 5.57502C5.44753 5.39713 5.53647 5.05678 5.53647 4.55395C5.53647 4.05112 5.35859 3.62182 5.00281 3.26605C4.64704 2.91027 4.21774 2.73238 3.71491 2.73238C3.21208 2.73238 2.78278 2.91027 2.427 3.26605C2.07123 3.62182 1.89334 4.05112 1.89334 4.55395C1.89334 5.05678 2.07123 5.48608 2.427 5.84185C2.78278 6.19763 3.21208 6.37551 3.71491 6.37551C4.21774 6.37551 4.64704 6.19763 5.00281 5.84185ZM7.35804 4.55395C7.35804 5.07101 7.27977 5.49557 7.12323 5.82762L4.53319 11.335C4.45729 11.4916 4.34463 11.6149 4.1952 11.705C4.04578 11.7951 3.88568 11.8402 3.71491 11.8402C3.54414 11.8402 3.38404 11.7951 3.23461 11.705C3.08519 11.6149 2.9749 11.4916 2.90374 11.335L0.306589 5.82762C0.150048 5.49557 0.0717773 5.07101 0.0717773 4.55395C0.0717773 3.54829 0.427552 2.68969 1.1391 1.97814C1.85065 1.26659 2.70925 0.910818 3.71491 0.910818C4.72056 0.910818 5.57917 1.26659 6.29072 1.97814C7.00226 2.68969 7.35804 3.54829 7.35804 4.55395Z" fill="#777777"/>
@@ -181,7 +181,7 @@ export default function ContactPage() {
 
             <div className={styles.separator}></div>
 
-            <h4 className="section-subheading">Business <strong>Hours</strong></h4>
+            <h4 className={styles['section-subheading']}>Business <strong>Hours</strong></h4>
             <p className={styles['business-hours']}>Monday - Sunday 7am to 7pm PST</p>
           </div>
         </section>
