@@ -1,114 +1,375 @@
-import styles from './page.module.scss';
-
 export default function SubscriptionPage() {
   return (
-    <div className={styles.subscriptionPage}>
-      <header className={styles.header}>
-        <div className={styles.headerContainer}>
-          <button className={styles.menuButton} aria-label="Menu">
-            <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 15.75V17.25C18 17.4531 17.9258 17.6289 17.7773 17.7773C17.6289 17.9258 17.4531 18 17.25 18H0.75C0.546875 18 0.371094 17.9258 0.222656 17.7773C0.0742188 17.6289 0 17.4531 0 17.25V15.75C0 15.5469 0.0742188 15.3711 0.222656 15.2227C0.371094 15.0742 0.546875 15 0.75 15H17.25C17.4531 15 17.6289 15.0742 17.7773 15.2227C17.9258 15.3711 18 15.5469 18 15.75ZM18 9.75V11.25C18 11.4531 17.9258 11.6289 17.7773 11.7773C17.6289 11.9258 17.4531 12 17.25 12H0.75C0.546875 12 0.371094 11.9258 0.222656 11.7773C0.0742188 11.6289 0 11.4531 0 11.25V9.75C0 9.54688 0.0742188 9.37109 0.222656 9.22266C0.371094 9.07422 0.546875 9 0.75 9H17.25C17.4531 9 17.6289 9.07422 17.7773 9.22266C17.9258 9.37109 18 9.54688 18 9.75ZM18 3.75V5.25C18 5.45312 17.9258 5.62891 17.7773 5.77734C17.6289 5.92578 17.4531 6 17.25 6H0.75C0.546875 6 0.371094 5.92578 0.222656 5.77734C0.0742188 5.62891 0 5.45312 0 5.25V3.75C0 3.54688 0.0742188 3.37109 0.222656 3.22266C0.371094 3.07422 0.546875 3 0.75 3H17.25C17.4531 3 17.6289 3.07422 17.7773 3.22266C17.9258 3.37109 18 3.54688 18 3.75Z" fill="white"/>
-            </svg>
+    <div className="subscription-wrapper">
+      <header className="subscription-header">
+        <div className="header-nav">
+          <div className="logo-section">
+            <a href="/" className="logo-link">
+              <img 
+                alt="COMQUEST" 
+                src="https://comquestmed.com/img/comquest-logo-color.png" 
+                className="logo-image"
+              />
+            </a>
+          </div>
+          <nav className="main-nav">
+            <ul className="nav-list">
+              <li><a href="/blog" className="nav-link">Blog</a></li>
+              <li><a href="/faq" className="nav-link">FAQ</a></li>
+              <li><a href="/our-team" className="nav-link">Our Team</a></li>
+              <li><a href="/institutional-accounts" className="nav-link">Institutional Accounts</a></li>
+              <li><a href="/why-comquest" className="nav-link">Why COMQUEST?</a></li>
+              <li><a href="/login" className="nav-link">Login</a></li>
+            </ul>
+          </nav>
+          <button className="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
-          <img 
-            src="https://api.builder.io/api/v1/image/assets/TEMP/5110e2adbd48f52a8e96b2de7f412983c96cf8d8?width=303" 
-            alt="COMQUEST" 
-            className={styles.logo}
-          />
         </div>
       </header>
 
-      <main className={styles.mainContent}>
-        <section className={styles.pageHeader}>
-          <div className={styles.pageHeaderIcon}>
-            <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.85929 18.4286V15.8572C6.85929 15.7322 6.81911 15.6295 6.73875 15.5491C6.65839 15.4688 6.55572 15.4286 6.43072 15.4286H2.145C2.02 15.4286 1.91732 15.4688 1.83697 15.5491C1.75661 15.6295 1.71643 15.7322 1.71643 15.8572V18.4286C1.71643 18.5536 1.75661 18.6563 1.83697 18.7366C1.91732 18.817 2.02 18.8572 2.145 18.8572H6.43072C6.55572 18.8572 6.65839 18.817 6.73875 18.7366C6.81911 18.6563 6.85929 18.5536 6.85929 18.4286ZM6.85929 13.2857V10.7143C6.85929 10.5893 6.81911 10.4866 6.73875 10.4063C6.65839 10.3259 6.55572 10.2857 6.43072 10.2857H2.145C2.02 10.2857 1.91732 10.3259 1.83697 10.4063C1.75661 10.4866 1.71643 10.5893 1.71643 10.7143V13.2857C1.71643 13.4107 1.75661 13.5134 1.83697 13.5938C1.91732 13.6741 2.02 13.7143 2.145 13.7143H6.43072C6.55572 13.7143 6.65839 13.6741 6.73875 13.5938C6.81911 13.5134 6.85929 13.4107 6.85929 13.2857ZM13.7164 18.4286V15.8572C13.7164 15.7322 13.6763 15.6295 13.5959 15.5491C13.5155 15.4688 13.4129 15.4286 13.2879 15.4286H9.00214C8.87714 15.4286 8.77447 15.4688 8.69411 15.5491C8.61375 15.6295 8.57357 15.7322 8.57357 15.8572V18.4286C8.57357 18.5536 8.61375 18.6563 8.69411 18.7366C8.77447 18.817 8.87714 18.8572 9.00214 18.8572H13.2879C13.4129 18.8572 13.5155 18.817 13.5959 18.7366C13.6763 18.6563 13.7164 18.5536 13.7164 18.4286ZM6.85929 8.14287V5.57144C6.85929 5.44644 6.81911 5.34376 6.73875 5.26341C6.65839 5.18305 6.55572 5.14287 6.43072 5.14287H2.145C2.02 5.14287 1.91732 5.18305 1.83697 5.26341C1.75661 5.34376 1.71643 5.44644 1.71643 5.57144V8.14287C1.71643 8.26787 1.75661 8.37055 1.83697 8.45091C1.91732 8.53126 2.02 8.57144 2.145 8.57144H6.43072C6.55572 8.57144 6.65839 8.53126 6.73875 8.45091C6.81911 8.37055 6.85929 8.26787 6.85929 8.14287ZM13.7164 13.2857V10.7143C13.7164 10.5893 13.6763 10.4866 13.5959 10.4063C13.5155 10.3259 13.4129 10.2857 13.2879 10.2857H9.00214C8.87714 10.2857 8.77447 10.3259 8.69411 10.4063C8.61375 10.4866 8.57357 10.5893 8.57357 10.7143V13.2857C8.57357 13.4107 8.61375 13.5134 8.69411 13.5938C8.77447 13.6741 8.87714 13.7143 9.00214 13.7143H13.2879C13.4129 13.7143 13.5155 13.6741 13.5959 13.5938C13.6763 13.5134 13.7164 13.4107 13.7164 13.2857ZM20.5736 18.4286V15.8572C20.5736 15.7322 20.5334 15.6295 20.453 15.5491C20.3727 15.4688 20.27 15.4286 20.145 15.4286H15.8593C15.7343 15.4286 15.6316 15.4688 15.5513 15.5491C15.4709 15.6295 15.4307 15.7322 15.4307 15.8572V18.4286C15.4307 18.5536 15.4709 18.6563 15.5513 18.7366C15.6316 18.817 15.7343 18.8572 15.8593 18.8572H20.145C20.27 18.8572 20.3727 18.817 20.453 18.7366C20.5334 18.6563 20.5736 18.5536 20.5736 18.4286ZM13.7164 8.14287V5.57144C13.7164 5.44644 13.6763 5.34376 13.5959 5.26341C13.5155 5.18305 13.4129 5.14287 13.2879 5.14287H9.00214C8.87714 5.14287 8.77447 5.18305 8.69411 5.26341C8.61375 5.34376 8.57357 5.44644 8.57357 5.57144V8.14287C8.57357 8.26787 8.61375 8.37055 8.69411 8.45091C8.77447 8.53126 8.87714 8.57144 9.00214 8.57144H13.2879C13.4129 8.57144 13.5155 8.53126 13.5959 8.45091C13.6763 8.37055 13.7164 8.26787 13.7164 8.14287ZM20.5736 13.2857V10.7143C20.5736 10.5893 20.5334 10.4866 20.453 10.4063C20.3727 10.3259 20.27 10.2857 20.145 10.2857H15.8593C15.7343 10.2857 15.6316 10.3259 15.5513 10.4063C15.4709 10.4866 15.4307 10.5893 15.4307 10.7143V13.2857C15.4307 13.4107 15.4709 13.5134 15.5513 13.5938C15.6316 13.6741 15.7343 13.7143 15.8593 13.7143H20.145C20.27 13.7143 20.3727 13.6741 20.453 13.5938C20.5334 13.5134 20.5736 13.4107 20.5736 13.2857ZM20.5736 8.14287V5.57144C20.5736 5.44644 20.5334 5.34376 20.453 5.26341C20.3727 5.18305 20.27 5.14287 20.145 5.14287H15.8593C15.7343 5.14287 15.6316 5.18305 15.5513 5.26341C15.4709 5.34376 15.4307 5.44644 15.4307 5.57144V8.14287C15.4307 8.26787 15.4709 8.37055 15.5513 8.45091C15.6316 8.53126 15.7343 8.57144 15.8593 8.57144H20.145C20.27 8.57144 20.3727 8.53126 20.453 8.45091C20.5334 8.37055 20.5736 8.26787 20.5736 8.14287ZM22.2879 3.85715V18.4286C22.2879 19.0179 22.078 19.5223 21.6584 19.942C21.2388 20.3616 20.7343 20.5714 20.145 20.5714H2.145C1.55572 20.5714 1.05125 20.3616 0.631608 19.942C0.211965 19.5223 0.00214386 19.0179 0.00214386 18.4286V3.85715C0.00214386 3.26787 0.211965 2.7634 0.631608 2.34376C1.05125 1.92412 1.55572 1.7143 2.145 1.7143H20.145C20.7343 1.7143 21.2388 1.92412 21.6584 2.34376C22.078 2.7634 22.2879 3.26787 22.2879 3.85715Z" fill="#505458"/>
-            </svg>
-          </div>
-          <h1 className={styles.pageTitle}>Add Subscription</h1>
-        </section>
-
-        <section className={styles.stepsContainer}>
-          <div className={styles.stepItem}>
-            <div className={styles.stepBadge}>1</div>
-            <span className={styles.stepLabel}>Select your exam(s)</span>
-          </div>
-          <div className={`${styles.stepItem} ${styles.stepItemActive}`}>
-            <div className={`${styles.stepBadge} ${styles.stepBadgeActive}`}>2</div>
-            <span className={styles.stepLabel}>Billing Information</span>
+      <main className="subscription-main">
+        <section className="page-hero">
+          <div className="hero-container">
+            <h1 className="hero-title">Sign Up Now</h1>
+            <nav className="breadcrumb">
+              <ol className="breadcrumb-list">
+                <li><a href="/">Home</a></li>
+                <li><span>Sign Up</span></li>
+              </ol>
+            </nav>
           </div>
         </section>
 
-        <section className={styles.orderSummarySection}>
-          <div className={styles.orderSummaryCard}>
-            <div className={styles.orderHeader}>
-              <div className={styles.encryptBadge}>
-                <img 
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/93d5c4b55277c61cbee2385ecf166d34ea8c00da?width=170" 
-                  alt="Let's Encrypt" 
-                  className={styles.encryptLogo}
-                />
-              </div>
-              <h2 className={styles.orderTitle}>Order Summary</h2>
-              <p className={styles.orderSubtitle}>This is a secure 128-bit SSL encrypted payment</p>
+        <section className="testimonial-section">
+          <div className="testimonial-card">
+            <div className="testimonial-author">
+              <div className="author-avatar"></div>
+              <h3 className="author-name">Brian Stocker</h3>
             </div>
+            <p className="testimonial-text">
+              After using multiple COMLEX question banks for Level 1 and 2, I realized that quality is far more important than quantity and if I had to repeat it, I would focus on COMQUEST as my primary question bank. It covered all topics, had in depth explanations, and even gave tips and mnemonics that proved invaluable.
+            </p>
+          </div>
+        </section>
 
-            <div className={styles.orderDetails}>
-              <div className={styles.orderBox}>
-                <div className={styles.orderBoxHeader}>
-                  Buy Now, Activate Anytime
+        <section className="products-section">
+          <div className="products-container">
+            {/* COMLEX Question Bank */}
+            <article className="product-card">
+              <header className="product-header">
+                <h2 className="product-title">COMLEX Question Bank</h2>
+                <p className="product-subtitle">Updated for 2025</p>
+              </header>
+
+              <form className="product-form">
+                <fieldset className="form-group">
+                  <legend className="form-legend">Choose the COMLEX Level</legend>
+                  <div className="checkbox-group">
+                    <label className="checkbox-label">
+                      <input type="checkbox" name="level" value="1" />
+                      COMLEX Level 1
+                    </label>
+                    <label className="checkbox-label">
+                      <input type="checkbox" name="level" value="2" />
+                      COMLEX Level 2-CE
+                    </label>
+                    <label className="checkbox-label">
+                      <input type="checkbox" name="level" value="3" />
+                      COMLEX Level 3
+                      <span className="badge-note">Now includes CDM type cases!</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset className="form-group">
+                  <label htmlFor="comlex-length" className="form-label">Choose Subscription Length</label>
+                  <select id="comlex-length" name="subscription-length" className="form-select" disabled>
+                    <option>1 Month: $179</option>
+                    <option>2 Months: $269</option>
+                    <option>3 Months: $329</option>
+                    <option>6 Months: $389</option>
+                    <option>1 Year: $489</option>
+                  </select>
+                </fieldset>
+              </form>
+
+              <div className="product-summary">
+                <div className="summary-total">
+                  <span className="total-label">Total:</span>
+                  <span className="total-price">$0</span>
                 </div>
-                <div className={styles.orderBoxContent}>
-                  <div className={styles.productInfo}>
-                    <div className={styles.productDetails}>
-                      <p className={styles.productName}>COMLEX Level 1</p>
-                      <p className={styles.productDuration}>1 month</p>
+                <button className="btn btn-add-to-cart">Add to Cart</button>
+                <p className="product-note">Activate Individually, Anytime</p>
+              </div>
+            </article>
+
+            {/* COMAT Question Bank */}
+            <article className="product-card">
+              <header className="product-header">
+                <h2 className="product-title">COMAT Question Bank</h2>
+                <p className="product-highlight">Over 2,900 Questions Total!</p>
+              </header>
+
+              <div className="tabs-container">
+                <div className="tabs-nav">
+                  <button className="tab-btn active" data-tab="individual">Individual COMATs</button>
+                  <button className="tab-btn" data-tab="all">All 8 COMATs</button>
+                </div>
+
+                <div className="tab-content active">
+                  <form className="product-form">
+                    <fieldset className="form-group">
+                      <div className="checkbox-group">
+                        <label className="checkbox-label">
+                          <input type="checkbox" name="comat" value="emergency" />
+                          Emergency Medicine <span className="question-count">(294 Questions)</span>
+                        </label>
+                        <label className="checkbox-label">
+                          <input type="checkbox" name="comat" value="family" />
+                          Family Medicine <span className="question-count">(361 Questions)</span>
+                        </label>
+                        <label className="checkbox-label">
+                          <input type="checkbox" name="comat" value="internal" />
+                          Internal Medicine <span className="question-count">(400 Questions)</span>
+                        </label>
+                        <label className="checkbox-label">
+                          <input type="checkbox" name="comat" value="obgyn" />
+                          Ob/Gyn <span className="question-count">(369 Questions)</span>
+                        </label>
+                        <label className="checkbox-label">
+                          <input type="checkbox" name="comat" value="omm" />
+                          OMM <span className="question-count">(128 Questions)</span>
+                        </label>
+                        <label className="checkbox-label">
+                          <input type="checkbox" name="comat" value="pediatrics" />
+                          Pediatrics <span className="question-count">(317 Questions)</span>
+                        </label>
+                        <label className="checkbox-label">
+                          <input type="checkbox" name="comat" value="psychiatry" />
+                          Psychiatry <span className="question-count">(381 Questions)</span>
+                        </label>
+                        <label className="checkbox-label">
+                          <input type="checkbox" name="comat" value="surgery" />
+                          Surgery <span className="question-count">(336 Questions)</span>
+                        </label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset className="form-group">
+                      <label htmlFor="comat-length" className="form-label">Choose Subscription Length</label>
+                      <select id="comat-length" name="comat-subscription-length" className="form-select" disabled>
+                        <option>1 Month: $67</option>
+                        <option>2 Months: $87</option>
+                        <option>3 Months: $107</option>
+                      </select>
+                    </fieldset>
+                  </form>
+
+                  <div className="product-summary">
+                    <div className="summary-total">
+                      <span className="total-label">Total:</span>
+                      <span className="total-price">$0</span>
                     </div>
-                    <div className={styles.productPrice}>$179.00</div>
+                    <button className="btn btn-add-to-cart">Add to Cart</button>
+                    <p className="product-note">Activate Individually, Anytime</p>
                   </div>
                 </div>
-                <a href="#" className={styles.comboLink}>
-                  <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.7273 9.45202C12.8478 9.33148 12.9081 9.18081 12.9081 9.00001C12.9081 8.81921 12.8478 8.66854 12.7273 8.548L11.8132 7.63394L8.17705 3.99778C8.05652 3.87724 7.90585 3.81697 7.72505 3.81697C7.54424 3.81697 7.39357 3.87724 7.27304 3.99778L6.35897 4.91184C6.23844 5.03238 6.17817 5.18304 6.17817 5.36385C6.17817 5.54465 6.23844 5.69532 6.35897 5.81586L8.25741 7.71429H3.215C3.04089 7.71429 2.89022 7.77791 2.76299 7.90514C2.63576 8.03238 2.57214 8.18304 2.57214 8.35715V9.64287C2.57214 9.81697 2.63576 9.96764 2.76299 10.0949C2.89022 10.2221 3.04089 10.2857 3.215 10.2857H8.25741L6.35897 12.1842C6.23174 12.3114 6.16813 12.4621 6.16813 12.6362C6.16813 12.8103 6.23174 12.9609 6.35897 13.0882L7.27304 14.0022C7.39357 14.1228 7.54424 14.183 7.72505 14.183C7.90585 14.183 8.05652 14.1228 8.17705 14.0022L11.8132 10.3661L12.7273 9.45202ZM14.3947 5.1278C14.3947 5.1278 14.5671 5.42328 14.912 6.01424C15.2569 6.6052 15.4293 7.60046 15.4293 9.00001C15.4293 10.3996 15.0844 11.6903 14.3947 12.8722C13.705 14.0541 12.7691 14.99 11.5872 15.6797C10.4053 16.3694 9.11455 16.7143 7.715 16.7143C6.31545 16.7143 5.02471 16.3694 3.84279 15.6797C2.66087 14.99 1.72505 14.0541 1.03531 12.8722C0.345581 11.6903 0.000715256 10.3996 0.000715256 9.00001C0.000715256 7.60046 0.345581 6.30972 1.03531 5.1278C1.72505 3.94588 2.66087 3.01005 3.84279 2.32032C5.02471 1.63059 6.31545 1.28572 7.715 1.28572C9.11455 1.28572 10.4053 1.63059 11.5872 2.32032C12.7691 3.01005 13.705 3.94588 14.3947 5.1278Z" fill="#337AB7"/>
-                  </svg>
-                  Special combo-deal available
-                </a>
-                <div className={styles.savingsBadge}>
-                  <p className={styles.savingsAmount}>$0.00</p>
-                  <p className={styles.savingsLabel}>saved!</p>
+
+                <div className="tab-content">
+                  <div className="bundle-offer">
+                    <h3 className="bundle-title">All 8 COMATs<br />for 3 Months Each</h3>
+                    <div className="bundle-pricing">
+                      <span className="original-price">$856</span>
+                      <span className="sale-price">$599</span>
+                    </div>
+                    <p className="savings-label">Save Over 30%</p>
+                  </div>
+
+                  <div className="product-summary">
+                    <div className="summary-total">
+                      <span className="total-label">Total:</span>
+                      <span className="total-price">$599</span>
+                    </div>
+                    <button className="btn btn-add-to-cart">Add to Cart</button>
+                    <p className="product-note">Activate Individually, Anytime</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div className={styles.orderTotal}>
-              <p className={styles.totalLabel}>Total <span className={styles.totalAmount}>$179.00</span></p>
-            </div>
+            {/* Bundle Offer */}
+            <article className="product-card bundle-card">
+              <header className="product-header">
+                <span className="bundle-badge">BUNDLE</span>
+                <p className="bundle-description">Buy together and save 44%</p>
+              </header>
 
-            <div className={styles.couponSection}>
-              <a href="#" className={styles.couponLink}>Use coupon</a>
-            </div>
+              <div className="bundle-details">
+                <p className="bundle-combo">
+                  All 8 COMATs for 3 Months Each <span className="plus-sign">+</span> Any COMLEX Level for 1 Year
+                </p>
+                <div className="bundle-pricing">
+                  <span className="original-price">$1345</span>
+                  <span className="sale-price">$889</span>
+                </div>
+              </div>
 
-            <div className={styles.termsSection}>
-              <p className={styles.termsText}>
-                By purchasing, you agree to the <a href="#" className={styles.termsLink}>terms</a> below.
-              </p>
-              <p className={styles.termsNote}>
-                OK, we know you don't read these, but we do want to make sure you understand our terms regarding refunds
-              </p>
-            </div>
+              <form className="product-form">
+                <fieldset className="form-group">
+                  <label htmlFor="bundle-comlex" className="form-label">Choose COMLEX Level</label>
+                  <select id="bundle-comlex" name="bundle-comlex" className="form-select">
+                    <option value="1">COMLEX Level 1</option>
+                    <option value="2" selected>COMLEX Level 2-CE</option>
+                    <option value="3">COMLEX Level 3</option>
+                  </select>
+                </fieldset>
+              </form>
 
-            <div className={styles.actionButtons}>
-              <button className={styles.prevButton}>
-                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.82031 10.5703C4.8724 10.6224 4.89844 10.6823 4.89844 10.75C4.89844 10.8177 4.8724 10.8776 4.82031 10.9297L4.42969 11.3203C4.3776 11.3724 4.31771 11.3984 4.25 11.3984C4.18229 11.3984 4.1224 11.3724 4.07031 11.3203L0.429688 7.67969C0.377604 7.6276 0.351562 7.56771 0.351562 7.5C0.351562 7.43229 0.377604 7.3724 0.429688 7.32031L4.07031 3.67969C4.1224 3.6276 4.18229 3.60156 4.25 3.60156C4.31771 3.60156 4.3776 3.6276 4.42969 3.67969L4.82031 4.07031C4.8724 4.1224 4.89844 4.18229 4.89844 4.25C4.89844 4.31771 4.8724 4.3776 4.82031 4.42969L1.75 7.5L4.82031 10.5703ZM7.82031 10.5703C7.8724 10.6224 7.89844 10.6823 7.89844 10.75C7.89844 10.8177 7.8724 10.8776 7.82031 10.9297L7.42969 11.3203C7.3776 11.3724 7.31771 11.3984 7.25 11.3984C7.18229 11.3984 7.1224 11.3724 7.07031 11.3203L3.42969 7.67969C3.3776 7.6276 3.35156 7.56771 3.35156 7.5C3.35156 7.43229 3.3776 7.3724 3.42969 7.32031L7.07031 3.67969C7.1224 3.6276 7.18229 3.60156 7.25 3.60156C7.31771 3.60156 7.3776 3.6276 7.42969 3.67969L7.82031 4.07031C7.8724 4.1224 7.89844 4.18229 7.89844 4.25C7.89844 4.31771 7.8724 4.3776 7.82031 4.42969L4.75 7.5L7.82031 10.5703Z" fill="white"/>
+              <div className="product-summary">
+                <div className="summary-total">
+                  <span className="total-label">Total:</span>
+                  <span className="total-price">$889</span>
+                </div>
+                <button className="btn btn-add-to-cart">Add to Cart</button>
+                <p className="product-note">Activate Individually, Anytime</p>
+              </div>
+            </article>
+          </div>
+
+          {/* Shopping Cart */}
+          <aside className="shopping-cart">
+            <h2 className="cart-title">YOUR CART</h2>
+            <div className="cart-empty">
+              <p>Your shopping cart is empty</p>
+            </div>
+            <div className="cart-actions">
+              <button className="btn btn-next">
+                Next
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M2 10l8-8M10 10v-8H2" stroke="currentColor" strokeWidth="1.5"/>
                 </svg>
-                Prev
               </button>
-              <button className={styles.submitButton}>Enter Secure Payment</button>
+            </div>
+          </aside>
+        </section>
+
+        {/* Features Section */}
+        <section className="features-section">
+          <h2 className="section-title">Your Subscription Includes the Following:</h2>
+          
+          <div className="features-tabs">
+            <div className="tabs-nav features-nav">
+              <button className="tab-btn active">Test Taking Strategy</button>
+              <button className="tab-btn">Platform Features</button>
+              <button className="tab-btn">High Quality</button>
+              <button className="tab-btn">Pause Exams</button>
+              <button className="tab-btn">Exam Size</button>
+              <button className="tab-btn">Mobile</button>
+              <button className="tab-btn">Customer Service</button>
+            </div>
+
+            <div className="features-content">
+              <div className="feature-group">
+                <h3 className="feature-heading">Test Taking Strategy And Insights</h3>
+                <ul className="feature-list">
+                  <li>
+                    <h4>Various question types</h4>
+                    <p>Build a test from any combination of question types: New only, New and Incorrect, Incorrect only, Questions Marked for Review.</p>
+                  </li>
+                  <li>
+                    <h4>Mark questions</h4>
+                    <p>Mark any questions for later review and to create future exams with these questions. Marked questions dashboards tracks various metrics on these questions.</p>
+                  </li>
+                  <li>
+                    <h4>Add and review notes</h4>
+                    <p>Take notes and filter them later to review before your exam.</p>
+                  </li>
+                  <li>
+                    <h4>Comment</h4>
+                    <p>Comment on a question or explanation and our physician editors will review your comment and reply if a response is needed.</p>
+                  </li>
+                  <li>
+                    <h4>Timed mode</h4>
+                    <p>Create exams in timed mode to keep track of how much time you're taking on each question and on average compared to the national average and the goal of 72 seconds/question.</p>
+                  </li>
+                  <li>
+                    <h4>Tutor mode</h4>
+                    <p>See thorough explanations immediately after you commit to an answer for each question.</p>
+                  </li>
+                  <li>
+                    <h4>Untimed mode</h4>
+                    <p>Work on test-taking strategy rather than time management.</p>
+                  </li>
+                  <li>
+                    <h4>Dimension I and II categorization</h4>
+                    <p>Choose from two types of categories when creating an exam. For example, you can choose to do only Cardiology management questions.</p>
+                  </li>
+                  <li>
+                    <h4>Resettable score</h4>
+                    <p>Reset your resettable score to keep track of your performance after a reset.</p>
+                  </li>
+                  <li>
+                    <h4>Graphical representation of performance</h4>
+                    <p>See how you're doing compared to your peers through graphs and line charts on dimension I, dimension II, and overall!</p>
+                  </li>
+                  <li>
+                    <h4>Countdown until exam</h4>
+                    <p>Enter your exam date for a countdown of days until your exam.</p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
       </main>
+
+      <footer className="subscription-footer">
+        <div className="footer-container">
+          <div className="footer-content">
+            <div className="footer-section">
+              <h4 className="footer-heading">Address</h4>
+              <address className="footer-address">
+                18740 Ventura Blvd #100<br />
+                Tarzana, CA 91356
+              </address>
+            </div>
+
+            <div className="footer-section">
+              <h4 className="footer-heading">Follow Us</h4>
+              <div className="social-links">
+                <a href="https://www.facebook.com/comquestmed" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.instagram.com/comquestmed" target="_blank" rel="noopener noreferrer">Instagram</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <div className="footer-branding">
+              <img src="https://comquestmed.com/img/logo-footer.png" alt="COMQUEST" className="footer-logo" />
+              <p className="copyright">COMQUEST Osteopathic Specialists, LLC 2009-2026 © All rights reserved</p>
+              <p className="footer-description">
+                COMQUEST ensures that you pass your exams with higher scores, less preparation time, and less anxiety, while providing amazing support along the way. We want to see our subscribers match at top residency programs.
+              </p>
+              <p className="footer-disclaimer">
+                COMQUEST is in no way affiliated with the Comprehensive Osteopathic Medical Licensing Examination (COMLEX-USA®), Comprehensive Osteopathic Medical Achievement Test (COMAT®), or National Board of Osteopathic Medical Examiners (NBOME®).
+              </p>
+            </div>
+
+            <nav className="footer-nav">
+              <ul className="footer-nav-list">
+                <li><a href="/faq">FAQ's</a></li>
+                <li><a href="/sitemap">Sitemap</a></li>
+                <li><a href="/terms">Terms & Conditions</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
