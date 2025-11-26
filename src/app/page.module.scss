@@ -1,0 +1,934 @@
+// CSS Variables
+:root {
+  --color-white: #FFF;
+  --color-grey-96: #F6F6F6;
+  --color-grey-93: #EEE;
+  --color-grey-94: #F0F0ED;
+  --color-grey-87: #DDD;
+  --color-grey-84: #D6D6D6;
+  --color-grey-60: #999;
+  --color-grey-56: #869791;
+  --color-grey-47: #777;
+  --color-grey-33: #505458;
+  --color-grey-31: #505050;
+  --color-grey-20: #333;
+  --color-grey-9: #171717;
+  --color-grey-5: #0E0E0E;
+  --color-grey-2: #060606;
+  --color-azure-50: #0AF;
+  --color-azure-45: #0099E6;
+  --color-azure-40: #08C;
+  --color-green: #00C662;
+  
+  --font-open-sans: 'Open Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  --font-shadows: 'Shadows Into Light', cursive;
+  --font-inter: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+
+  --max-width: 1170px;
+}
+
+.pageWrapper {
+  min-height: 100vh;
+  background: var(--color-white);
+  font-family: var(--font-open-sans);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+// Header
+.header {
+  background: linear-gradient(180deg, var(--color-grey-96) 0%, var(--color-white) 100%);
+  border-top: 5px solid var(--color-grey-93);
+  position: relative;
+}
+
+.headerContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.logoContainer {
+  padding: 38.75px 0 7px 0;
+  
+  a {
+    text-decoration: none;
+  }
+}
+
+.logo {
+  width: 240px;
+  height: 32px;
+  display: block;
+}
+
+.topNav {
+  ul {
+    display: flex;
+    gap: 2px;
+    list-style: none;
+    min-height: 62px;
+    align-items: center;
+  }
+  
+  li {
+    a {
+      display: block;
+      padding: 6px 10px;
+      color: var(--color-grey-60);
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 24px;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        color: var(--color-azure-40);
+        background: rgba(0, 136, 204, 0.05);
+      }
+    }
+  }
+}
+
+.mainNavContainer {
+  background: var(--color-white);
+  padding: 16px 0 8px;
+}
+
+.mainNav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 15px;
+  
+  ul {
+    display: flex;
+    gap: -1px;
+    list-style: none;
+    justify-content: flex-end;
+  }
+  
+  li {
+    a {
+      display: block;
+      padding: 10px 13px;
+      color: var(--color-azure-40);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 14px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background: rgba(0, 136, 204, 0.1);
+      }
+    }
+  }
+}
+
+.navItemExams {
+  a {
+    background: var(--color-azure-40);
+    color: var(--color-white);
+    
+    &:hover {
+      background: var(--color-azure-45);
+    }
+  }
+}
+
+.navItemDropdown {
+  a {
+    border-radius: 5px 5px 5px 0;
+  }
+}
+
+.buyNowBtn {
+  background: var(--color-green) !important;
+  color: var(--color-white) !important;
+  border: 1px solid var(--color-green);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  
+  &:hover {
+    background: #00B058 !important;
+  }
+}
+
+// Main Content
+.main {
+  width: 100%;
+}
+
+.heroSection {
+  background: var(--color-grey-9);
+  padding: 10px 0;
+}
+
+.heroContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.heroText {
+  width: 66.6667%;
+  padding: 5px 15px 20px;
+  max-width: 800px;
+  
+  color: var(--color-white);
+  font-size: 19.6px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.heroEmphasis {
+  color: var(--color-azure-50);
+  font-family: var(--font-shadows);
+  font-size: 28.5px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.introSection {
+  padding: 20px 0;
+}
+
+.mainHeading {
+  color: var(--color-grey-5);
+  text-align: center;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 44px;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+
+.introText {
+  color: var(--color-grey-47);
+  text-align: center;
+  font-size: 22.4px;
+  font-weight: 300;
+  line-height: 33.6px;
+  margin-bottom: 20px;
+}
+
+// Features Showcase
+.featuresShowcase {
+  background: url('https://comquestmed.com/img/home-concept.png') no-repeat 50% 0;
+  background-size: cover;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.featureCards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 0 15px;
+  position: relative;
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 160px;
+}
+
+.featureCircle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: url('https://comquestmed.com/img/home-concept-item.png') no-repeat 0 0;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounceIn 1s ease;
+  
+  img {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+  }
+}
+
+.featureLabel {
+  color: var(--color-azure-40);
+  text-align: center;
+  font-family: var(--font-shadows);
+  font-size: 29.4px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.featureCardLarge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 350px;
+}
+
+.largeCircle {
+  width: 338px;
+  height: 338px;
+  border-radius: 50%;
+  background: url('https://comquestmed.com/img/home-concept-item.png') no-repeat -300px 0;
+  background-size: 185% 92%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circleAnimation {
+  width: 338px;
+  height: 338px;
+  border-radius: 50%;
+  overflow: hidden;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.featureLabelLarge {
+  color: var(--color-azure-40);
+  text-align: center;
+  font-family: var(--font-shadows);
+  font-size: 36.4px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.divider {
+  max-width: var(--max-width);
+  margin: 44px auto;
+  padding: 0 15px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.20) 50%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+// Stats Section
+.statsSection {
+  padding: 20px 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.statIcon {
+  margin-bottom: 10px;
+  
+  svg {
+    width: auto;
+    height: 36px;
+  }
+}
+
+.statNumber {
+  color: var(--color-grey-20);
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+
+.statLabel {
+  color: var(--color-grey-47);
+  font-size: 19.8px;
+  font-weight: 300;
+  line-height: 20px;
+  max-width: 292.5px;
+}
+
+// Features List
+.featuresListSection {
+  padding: 40px 0;
+}
+
+.featuresListLayout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.featuresColumn {
+  padding: 0 15px;
+}
+
+.sectionHeading {
+  color: var(--color-grey-5);
+  font-size: 30.8px;
+  font-weight: 300;
+  line-height: 42px;
+  letter-spacing: -1px;
+  margin-bottom: 32px;
+  
+  strong {
+    font-weight: 700;
+  }
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.featureItem {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.featureIcon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--color-azure-40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  
+  svg {
+    width: auto;
+    height: 14px;
+  }
+}
+
+.featureContent {
+  flex: 1;
+  
+  h4 {
+    color: var(--color-azure-40);
+    font-size: 19.6px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 7px;
+  }
+  
+  p {
+    color: var(--color-grey-47);
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.additionalFeatures {
+  margin-top: 40px;
+}
+
+.expandableFeature {
+  border: 1px solid var(--color-grey-87);
+  border-radius: 4px;
+  background: var(--color-white);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.expandableHeader {
+  background: var(--color-grey-96);
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  svg {
+    width: 16px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  
+  h4 {
+    color: var(--color-azure-40);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    margin: 0;
+  }
+}
+
+.expandableFeature p {
+  padding: 15px;
+  color: var(--color-grey-47);
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+}
+
+// Testimonials
+.testimonialsHeading {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.testimonialsSection {
+  padding: 20px 0;
+}
+
+.testimonialCard {
+  max-width: 585px;
+  margin: 0 auto;
+}
+
+.testimonialQuote {
+  background: var(--color-azure-45);
+  border-radius: 10px;
+  padding: 10px 50px;
+  position: relative;
+  margin-bottom: 20px;
+  
+  &::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 80px;
+    font-family: var(--font-inter);
+    color: var(--color-white);
+    opacity: 0.2;
+    line-height: 80px;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid var(--color-azure-45);
+  }
+  
+  p {
+    color: var(--color-white);
+    font-family: var(--font-inter);
+    font-size: 15.9px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 21.84px;
+    margin: 0;
+  }
+}
+
+.testimonialAuthor {
+  padding-left: 25px;
+  margin-bottom: 10px;
+  
+  strong {
+    color: var(--color-grey-5);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.testimonialRating {
+  padding-left: 30px;
+  
+  span {
+    color: var(--color-azure-40);
+    font-family: var(--font-inter);
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+// Blog Section
+.blogSection {
+  background: url('https://comquestmed.com/img/map-bottom.png') no-repeat 50% 0, var(--color-grey-94);
+  padding: 50px 0;
+}
+
+.blogLayout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.blogColumn {
+  padding: 0 15px;
+}
+
+.blogPost {
+  h4 {
+    color: var(--color-azure-40);
+    font-size: 19.6px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-bottom: 7px;
+  }
+  
+  p {
+    color: var(--color-grey-47);
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: var(--color-azure-40);
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.testimonialSmall {
+  .companyName {
+    color: var(--color-grey-47);
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+  
+  blockquote {
+    background: var(--color-azure-45);
+    border-radius: 10px;
+    padding: 10px 50px;
+    margin-bottom: 15px;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 25px;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid var(--color-azure-45);
+    }
+    
+    p {
+      color: var(--color-white);
+      font-family: var(--font-inter);
+      font-size: 15.9px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 21.84px;
+      margin: 0;
+    }
+  }
+}
+
+.testimonialMeta {
+  padding-left: 25px;
+  
+  strong {
+    color: var(--color-grey-5);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+// Footer
+.footer {
+  background: var(--color-grey-5);
+  border-top: 4px solid var(--color-grey-5);
+  padding: 10px 0;
+}
+
+.footerTop {
+  padding: 20px 0;
+}
+
+.footerSocial {
+  padding: 0 15px;
+  
+  h4 {
+    color: var(--color-white);
+    font-size: 22.5px;
+    font-weight: 300;
+    line-height: 27px;
+    margin-bottom: 13px;
+  }
+}
+
+.socialList {
+  display: flex;
+  gap: 4.28px;
+  list-style: none;
+  
+  li {
+    a {
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: url('https://comquestmed.com/img/social-sprites.png') no-repeat;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.30);
+      text-indent: -9999px;
+      transition: all 0.3s;
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    
+    &:first-child a {
+      background-position: 0 -120px;
+    }
+    
+    &:last-child a {
+      background-position: 0 -1680px;
+    }
+  }
+}
+
+.footerBottom {
+  background: var(--color-grey-2);
+  border-top: 4px solid var(--color-grey-2);
+  padding: 30px 0 10px;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.footerLogo {
+  img {
+    max-width: 67.5px;
+    height: auto;
+  }
+}
+
+.footerText {
+  color: var(--color-grey-33);
+  font-size: 12.6px;
+  line-height: 14px;
+  
+  p {
+    margin-bottom: 14px;
+    
+    &:first-child {
+      line-height: 24px;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footerNav {
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  
+  li {
+    display: inline-flex;
+    padding: 2.5px 0;
+    
+    &:not(:first-child) {
+      border-left: 1px solid var(--color-grey-31);
+      padding-left: 9px;
+      margin-left: 9px;
+    }
+    
+    a {
+      color: var(--color-white);
+      font-size: 12.6px;
+      line-height: 12px;
+      text-decoration: none;
+      
+      &:hover {
+        color: var(--color-azure-50);
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 1200px) {
+  .headerContainer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 15px;
+  }
+  
+  .logoContainer {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  .topNav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .mainNav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .featureCards {
+    flex-wrap: wrap;
+  }
+  
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .featuresListLayout {
+    grid-template-columns: 1fr;
+  }
+  
+  .blogLayout {
+    grid-template-columns: 1fr;
+  }
+  
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroText {
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .heroEmphasis {
+    font-size: 24px;
+  }
+  
+  .mainHeading {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .introText {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  
+  .featureCards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .statNumber {
+    font-size: 40px;
+  }
+  
+  .statLabel {
+    font-size: 16px;
+  }
+  
+  .sectionHeading {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .footerNav ul {
+    flex-direction: column;
+    
+    li {
+      border-left: none !important;
+      padding-left: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .topNav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .mainNav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .featureCard,
+  .featureCardLarge {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .largeCircle,
+  .circleAnimation {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .featureCircle {
+    width: 140px;
+    height: 140px;
+    
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
