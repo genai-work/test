@@ -1,6 +1,8 @@
+import styles from './page.module.scss';
+
 export default function ContactPage() {
   return (
-    <div className="contact-page">
+    <div className={styles['contact-page']}>
       <header className="header">
         <div className="header-container">
           <button className="menu-button" aria-label="Open menu">
