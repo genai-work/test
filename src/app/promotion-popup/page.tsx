@@ -1,4 +1,4 @@
-import styles from './styles.module.scss';
+import styles from './page.module.scss';
 
 export default function PromotionPopupPage() {
   return (
