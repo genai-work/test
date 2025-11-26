@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $primary-blue: rgb(0, 136, 204);
 $primary-green: rgb(0, 198, 98);
 $text-gray: rgb(187, 187, 187);
@@ -217,8 +219,8 @@ $google-shadow: rgba(0, 0, 0, 0.05);
   white-space: nowrap;
 
   &:hover {
-    background-color: darken($primary-green, 5%);
-    border-color: darken($primary-green, 5%);
+    background-color: color.adjust($primary-green, $lightness: -5%);
+    border-color: color.adjust($primary-green, $lightness: -5%);
   }
 
   &:active {
