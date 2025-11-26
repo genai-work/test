@@ -1,8 +1,8 @@
-import './page.module.scss';
+import styles from './page.module.scss';
 
 export default function AmbassadorPage() {
   return (
-    <div className="ambassador-page">
+    <div className={styles.ambassadorPage}>
       <header className="site-header">
         <div className="header-container">
           <button className="menu-toggle" aria-label="Toggle menu">
@@ -241,7 +241,7 @@ export default function AmbassadorPage() {
                     </div>
                   </div>
                   <div className="recaptcha-footer">
-                    <a href="#" className="recaptcha-link">Конфид��нциальность</a>
+                    <a href="#" className="recaptcha-link">Конфиденциальность</a>
                     <span> - </span>
                     <a href="#" className="recaptcha-link">Условия использования</a>
                   </div>
