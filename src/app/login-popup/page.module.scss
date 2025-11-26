@@ -1,0 +1,311 @@
+$primary-blue: rgb(0, 136, 204);
+$primary-green: rgb(0, 198, 98);
+$text-gray: rgb(187, 187, 187);
+$input-text: rgb(85, 85, 85);
+$dark-text: rgb(14, 14, 14);
+$icon-gray: rgb(115, 115, 115);
+$border-gray: rgb(204, 204, 204);
+$light-border: rgb(223, 223, 223);
+$light-border-alt: rgb(236, 236, 236);
+$white: rgb(255, 255, 255);
+$bg-light: rgb(249, 249, 249);
+$shadow-color: rgba(0, 0, 0, 0.04);
+$shadow-inset: rgba(0, 0, 0, 0.075);
+$button-shadow: rgba(0, 0, 0, 0.25);
+$google-shadow: rgba(0, 0, 0, 0.05);
+
+.loginContainer {
+  background: linear-gradient($white 1%, $bg-light 98%);
+  border: 1px solid;
+  border-color: $text-gray $light-border-alt $light-border;
+  border-radius: 8px;
+  box-shadow: $shadow-color 0 1px 1px 0;
+  color: $text-gray;
+  min-height: 100px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.loginCard {
+  border: 4px solid $primary-blue;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 8px;
+  color: $text-gray;
+  padding: 30px;
+  text-align: center;
+}
+
+.form {
+  color: $text-gray;
+  text-align: center;
+}
+
+.formTitle {
+  color: $dark-text;
+  display: inline-block;
+  font-size: 36.4px;
+  font-weight: 200;
+  letter-spacing: -1px;
+  line-height: 44px;
+  margin-bottom: 44px;
+}
+
+.formGroup {
+  color: $text-gray;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.formField {
+  color: $text-gray;
+  float: left;
+  min-height: 1px;
+  padding: 0 15px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.label {
+  color: $text-gray;
+  cursor: default;
+  display: inline-block;
+  margin-bottom: 5px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.input {
+  appearance: auto;
+  background-color: $white;
+  border: 1px solid $border-gray;
+  border-radius: 6px;
+  box-shadow: $shadow-inset 0 1px 1px 0 inset;
+  color: $input-text;
+  cursor: text;
+  font-size: 18px;
+  height: 46px;
+  line-height: 23.94px;
+  padding: 10px 16px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 100%;
+
+  &:focus {
+    border-color: $primary-blue;
+    box-shadow: $shadow-inset 0 1px 1px 0 inset;
+    outline: none;
+  }
+}
+
+.passwordGroup {
+  color: $text-gray;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.passwordField {
+  color: $text-gray;
+  float: left;
+  min-height: 1px;
+  padding: 0 15px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.checkboxWrapper {
+  color: $text-gray;
+  float: left;
+  text-align: center;
+
+  &:first-of-type {
+    margin-right: 15px;
+  }
+}
+
+.hiddenCheckbox {
+  appearance: auto;
+  border: none;
+  color: $text-gray;
+  cursor: default;
+  left: -9999px;
+  line-height: normal;
+  margin-top: 4px;
+  position: absolute;
+}
+
+.checkboxLabel {
+  color: $text-gray;
+  cursor: pointer;
+  display: inline-block;
+  max-width: 100%;
+  padding-left: 32px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+
+  &::before {
+    background-color: $white;
+    border: 1px solid $border-gray;
+    border-radius: 3px;
+    content: '';
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 16px;
+  }
+
+  input:checked + &::after {
+    content: '✓';
+    color: $primary-green;
+    font-size: 14px;
+    font-weight: bold;
+    left: 2px;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.checkboxText {
+  color: $text-gray;
+  cursor: pointer;
+  display: inline;
+  text-align: center;
+}
+
+.forgotLink {
+  color: $primary-blue;
+  cursor: pointer;
+  display: block;
+  float: right;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.submitWrapper {
+  color: $text-gray;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.submitButton {
+  appearance: button;
+  background-color: $primary-green;
+  border: 1px solid $primary-green;
+  border-radius: 4px;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+  padding: 6px 12px;
+  text-align: center;
+  text-shadow: $button-shadow 0 -1px 0;
+  text-wrap: nowrap;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: darken($primary-green, 5%);
+    border-color: darken($primary-green, 5%);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.googleSigninWrapper {
+  color: $text-gray;
+  margin-bottom: 5px;
+  margin-top: -15px;
+  text-align: center;
+}
+
+.googleButton {
+  appearance: button;
+  background-color: $white;
+  border: 1px outset rgb(0, 0, 0);
+  border-radius: 5px;
+  box-shadow: $google-shadow 1px 1px 0 1px;
+  color: $icon-gray;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  text-align: center;
+  text-wrap: nowrap;
+  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #f8f8f8;
+    box-shadow: $google-shadow 1px 1px 2px 1px;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.googleIconWrapper {
+  color: $icon-gray;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  height: 18px;
+  margin: 8px;
+  text-wrap: nowrap;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 18px;
+}
+
+.googleIcon {
+  color: $icon-gray;
+  cursor: pointer;
+  display: inline;
+  height: 100%;
+  width: 100%;
+}
+
+.googleButtonText {
+  color: $icon-gray;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roboto, arial, sans-serif;
+  font-weight: 700;
+  padding: 0 24px;
+  text-align: center;
+  text-wrap: nowrap;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.signupPrompt {
+  color: $text-gray;
+  text-align: center;
+}
+
+.signupLink {
+  color: $primary-blue;
+  cursor: pointer;
+  display: inline;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
