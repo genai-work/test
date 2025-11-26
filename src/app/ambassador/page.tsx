@@ -1,8 +1,8 @@
-import styles from './page.module.scss';
+import './styles.scss';
 
 export default function AmbassadorPage() {
   return (
-    <div className={styles.ambassadorPage}>
+    <div className="ambassador-page">
       <header className="site-header">
         <div className="header-container">
           <button className="menu-toggle" aria-label="Toggle menu">
