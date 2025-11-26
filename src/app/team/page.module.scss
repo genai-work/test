@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@400;500&display=swap');
+
+// Color Variables
+$primary-blue: #0088cc;
+$primary-green: #00c662;
+$dark-bg: #171717;
+$text-dark: #0e0e0e;
+$text-gray: #999;
+$text-light-gray: #777;
+$border-light: #ddd;
+$border-gray: #ccc;
+$header-top: #eee;
+$light-bg: #f6f6f6;
+$white: #fff;
+$overlay-dark: rgba(36, 27, 28, 0.9);
+
+// Spacing
+$container-width: 1170px;
+$container-padding: 15px;
+
+.teamPage {
+  background: $white;
+  font-family: 'Open Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  color: $text-dark;
+}
+
+// Header Styles
+.header {
+  border-top: 5px solid $header-top;
+  background: linear-gradient(180deg, $light-bg 0%, $white 100%);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+  clear: both;
+  min-height: 100px;
+  padding-bottom: 10px;
+}
+
+.headerContainer {
+  display: table;
+  height: 100px;
+  margin-bottom: -35px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $container-width;
+  padding: 0 $container-padding;
+  position: relative;
+  width: $container-width;
+}
+
+.logoContainer {
+  display: table-cell;
+  height: 100%;
+  padding: 5px 0;
+  vertical-align: middle;
+  transition-delay: 0.2s;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+.logoLink {
+  cursor: pointer;
+  display: inline;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  aspect-ratio: auto 240 / 32;
+  cursor: pointer;
+  display: inline;
+  height: 32px;
+  margin-left: -38px;
+  overflow: clip;
+  position: relative;
+  top: 0;
+  vertical-align: middle;
+  width: 240px;
+}
+
+.mainNav {
+  float: right;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navItem {
+  border-radius: 4px;
+  color: $text-gray;
+  cursor: pointer;
+  display: inline;
+  float: left;
+  line-height: 24px;
+  outline-color: $text-gray;
+  padding: 6px 10px;
+  position: relative;
+  text-decoration-color: $text-gray;
+  text-emphasis-color: $text-gray;
+
+  &:hover {
+    color: $primary-blue;
+  }
+}
+
+.navItemLogin {
+  color: $primary-blue;
+}
+
+.secondaryNav {
+  float: right;
+  padding: 0 $container-padding;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.secondaryNavContainer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25px;
+  padding: 0 $container-padding;
+  position: relative;
+  width: $container-width;
+}
+
+.secondaryNavItem {
+  background-color: $primary-blue;
+  border-radius: 4px;
+  color: $white;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  margin: 3px;
+  padding: 10px 13px;
+  position: relative;
+  text-decoration-color: $white;
+  text-emphasis-color: $white;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.secondaryNavItemActive {
+  background-color: $primary-blue;
+}
+
+.buyButton {
+  background-color: $primary-green;
+  color: $white;
+  text-decoration-color: $white;
+}
+
+// Page Title Section
+.pageTitleSection {
+  background-color: $text-dark;
+  border-bottom: 5px solid #ccc;
+  border-top: 5px solid #384045;
+  margin-bottom: 11px;
+  max-height: 80px;
+  min-height: 50px;
+  position: relative;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    padding: 20px 15px;
+  }
+}
+
+.pageTitleContainer {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $container-padding;
+  text-align: left;
+  width: $container-width;
+}
+
+.pageTitle {
+  border-bottom: 5px solid $primary-blue;
+  color: $white;
+  display: inline-block;
+  font-size: 36.4px;
+  font-weight: 200;
+  letter-spacing: -1px;
+  line-height: 46px;
+  margin-bottom: -25px;
+  min-height: 37px;
+  outline-color: $white;
+  padding-bottom: 17px;
+  position: relative;
+  text-align: left;
+  text-decoration-color: $white;
+  text-emphasis-color: $white;
+}
+
+.breadcrumb {
+  display: inline-block;
+  margin-top: -3px;
+
+  a {
+    color: $primary-blue;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.breadcrumbSeparator {
+  color: $primary-blue;
+  margin: 0 5px;
+}
+
+// Main Content
+.mainContent {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $container-padding;
+  width: $container-width;
+}
+
+.sectionTitle {
+  color: $text-dark;
+  font-size: 30.8px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: 42px;
+  margin-bottom: 32px;
+  outline-color: $text-dark;
+  text-decoration-color: $text-dark;
+  text-emphasis-color: $text-dark;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+// Filter Tabs
+.filterTabs {
+  clear: both;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.filterTabItem {
+  float: left;
+  line-height: 24px;
+  margin-left: 2px;
+  position: relative;
+  list-style: none;
+
+  a {
+    border-radius: 4px;
+    color: $primary-blue;
+    cursor: pointer;
+    line-height: 24px;
+    outline-color: $primary-blue;
+    padding: 10px 15px;
+    position: relative;
+    text-decoration-color: $primary-blue;
+    text-emphasis-color: $primary-blue;
+    display: inline-block;
+  }
+}
+
+.filterTabActive {
+  background-color: $primary-blue !important;
+  color: $white !important;
+}
+
+// Divider
+.divider {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0)
+  );
+  border: none;
+  color: #808080;
+  height: 1px;
+  margin: 22px 0;
+  outline-color: #808080;
+  text-decoration-color: #808080;
+  text-emphasis-color: #808080;
+}
+
+// Team Grid
+.teamGrid {
+  position: relative;
+  margin-left: -$container-padding;
+  margin-right: -$container-padding;
+  height: 1822px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $container-padding;
+  padding: 0 $container-padding;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+.teamMember {
+  display: list-item;
+  line-height: 24px;
+  min-height: 1px;
+  padding: 0 $container-padding;
+  position: relative;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.teamMemberLink {
+  border-color: $primary-blue;
+  color: $primary-blue;
+  cursor: pointer;
+  line-height: 20px;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-decoration-color: $primary-blue;
+  text-emphasis-color: $primary-blue;
+  display: block;
+}
+
+.teamMemberImage {
+  border-radius: 3px;
+  color: $primary-blue;
+  cursor: pointer;
+  line-height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  overflow: clip;
+  position: relative;
+  text-decoration-color: $primary-blue;
+  text-emphasis-color: $primary-blue;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.teamMemberInfo {
+  background-color: $overlay-dark;
+  bottom: 10%;
+  color: $white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: -1px;
+  line-height: 25.7143px;
+  outline-color: $white;
+  padding: 9px 11px;
+  position: absolute;
+  text-decoration-color: $white;
+  text-emphasis-color: $white;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.teamMemberName {
+  border-color: $white;
+  color: $white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 25.7143px;
+  outline-color: $white;
+  text-decoration-color: $white;
+  text-emphasis-color: $white;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  transition-duration: 0.3s;
+  white-space: nowrap;
+  display: block;
+}
+
+.teamMemberRole {
+  background-color: $primary-blue;
+  border-radius: 2px;
+  color: $white;
+  cursor: pointer;
+  float: left;
+  font-size: 12px;
+  line-height: 17.1429px;
+  margin-bottom: -15px;
+  margin-left: -2px;
+  margin-right: -2px;
+  margin-top: 8px;
+  outline-color: $white;
+  padding: 2px 9px;
+  text-decoration-color: $white;
+  text-emphasis-color: $white;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px;
+}
+
+.teamMemberBio {
+  display: inline;
+  line-height: 20px;
+  padding: 10px 0;
+}
+
+.teamMemberBio p {
+  font-size: 12.6px;
+  height: 150px;
+  line-height: 20px;
+  margin-bottom: 8px;
+  padding: 10px;
+  text-decoration-color: $text-dark;
+  text-emphasis-color: $text-dark;
+}
+
+.readMore {
+  border-color: $primary-blue;
+  color: $primary-blue;
+  cursor: pointer;
+  display: inline;
+  font-size: 12.6px;
+  line-height: 20px;
+  outline-color: $primary-blue;
+  text-decoration-color: $primary-blue;
+  text-emphasis-color: $primary-blue;
+}
+
+// Team Stats Section
+.teamStats {
+  margin-left: -$container-padding;
+  margin-right: -$container-padding;
+  text-align: center;
+}
+
+.teamStatsContent {
+  float: left;
+  min-height: 1px;
+  padding: 0 $container-padding;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.teamStatsTitle {
+  color: $text-dark;
+  font-size: 30.8px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: 42px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  outline-color: $text-dark;
+  text-align: center;
+  text-decoration-color: $text-dark;
+  text-emphasis-color: $text-dark;
+}
+
+// Footer Styles
+.footer {
+  background-color: $text-dark;
+  border-top: 4px solid $text-dark;
+  clear: both;
+  font-size: 12.6px;
+  margin-top: 50px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.footerTop {
+  font-size: 12.6px;
+}
+
+.footerContainer {
+  font-size: 12.6px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $container-padding;
+  width: $container-width;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.footerSection {
+  float: left;
+  font-size: 12.6px;
+  margin-bottom: 25px;
+  min-height: 1px;
+  padding: 0 $container-padding;
+  position: relative;
+  width: 25%;
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+}
+
+.footerAddress {
+  font-size: 12.6px;
+}
+
+.footerHeading {
+  border-color: $white;
+  color: $white;
+  font-size: 22.68px;
+  font-weight: 200;
+  line-height: 27px;
+  margin-bottom: 14px;
+  outline-color: $white;
+  text-decoration-color: $white;
+  text-emphasis-color: $white;
+}
+
+.footerText {
+  font-size: 12.6px;
+  line-height: 24px;
+  margin-bottom: 10px;
+  color: #999;
+}
+
+.socialLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12.6px;
+
+  li {
+    display: inline-block;
+    line-height: 24px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+  }
+
+  a {
+    border-color: $white;
+    color: $white;
+    cursor: pointer;
+    font-size: 12.6px;
+    line-height: 12px;
+    outline-color: $white;
+    text-decoration: none;
+    text-decoration-color: $white;
+    text-emphasis-color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footerBottom {
+  background-color: #060606;
+  border-top: 4px solid #060606;
+  font-size: 12.6px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+
+.footerBottomContainer {
+  font-size: 12.6px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $container-padding;
+  width: $container-width;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.footerLogo {
+  border-color: $white;
+  color: $white;
+  cursor: pointer;
+  font-size: 12.6px;
+  outline-color: $white;
+  text-decoration-color: $white;
+  text-emphasis-color: $white;
+  flex-shrink: 0;
+}
+
+.footerLogoImage {
+  border-color: $white;
+  color: $white;
+  cursor: pointer;
+  font-size: 12.6px;
+  max-width: 100%;
+  outline-color: $white;
+  overflow: clip;
+  text-decoration-color: $white;
+  text-emphasis-color: $white;
+  vertical-align: middle;
+}
+
+.footerInfo {
+  font-size: 12.6px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.copyright {
+  border-color: #555;
+  color: #555;
+  font-size: 12.6px;
+  line-height: 24px;
+  outline-color: #555;
+  text-decoration-color: #555;
+  text-emphasis-color: #555;
+  margin-bottom: 15px;
+}
+
+.description {
+  border-color: #555;
+  color: #555;
+  font-size: 12.6px;
+  line-height: 24px;
+  margin-bottom: 15px;
+  outline-color: #555;
+  text-decoration-color: #555;
+  text-emphasis-color: #555;
+}
+
+.disclaimer {
+  border-color: #555;
+  color: #555;
+  font-size: 12.6px;
+  line-height: 14px;
+  outline-color: #555;
+  text-decoration-color: #555;
+  text-emphasis-color: #555;
+}
+
+.footerNav {
+  float: right;
+  font-size: 12.6px;
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    float: none;
+  }
+
+  a {
+    border-left: 1px solid #505050;
+    border-color: #505050 #505050 #505050 #505050;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12.6px;
+    line-height: 12px;
+    outline-color: $white;
+    padding: 0 8px;
+    text-decoration: none;
+    text-decoration-color: $white;
+    text-emphasis-color: $white;
+
+    &:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
