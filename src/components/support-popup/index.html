@@ -1,0 +1,70 @@
+<div class="support-popup-overlay">
+  <div class="support-popup">
+    <div class="support-popup__header">
+      <button type="button" aria-label="Close" class="support-popup__close-btn">×</button>
+      <h4 class="support-popup__title">Contact Support</h4>
+    </div>
+
+    <div class="support-popup__success-message" hidden>
+      <div class="support-popup__message-content">
+        <strong>
+          Thank you very much for taking the time to submit your feedback. It
+          will be read and responded to within a day.
+        </strong>
+      </div>
+    </div>
+
+    <div class="support-popup__error-message" hidden>
+      <div class="support-popup__message-content">
+        <strong>Support message failed!</strong>
+      </div>
+    </div>
+
+    <form class="support-popup__form" role="form" name="supportForm" novalidate>
+      <div class="support-popup__form-body">
+        <h4 class="support-popup__subtitle">Your feedback matters to us!</h4>
+        <p class="support-popup__description">
+          COMQUEST is built on suggestions made by subscribers like yourself. We
+          are adding new content and technology regularly and want to know what
+          you would like. We appreciate you taking the time to write us so that
+          we can continue to provide the best exam preparation.
+        </p>
+
+        <div class="support-popup__form-group">
+          <label for="support-subject" class="support-popup__label">Subject</label>
+          <div class="support-popup__input-wrapper">
+            <input
+              type="text"
+              id="support-subject"
+              name="subject"
+              placeholder="What does this concern?"
+              required
+              class="support-popup__input"
+            />
+          </div>
+        </div>
+
+        <div class="support-popup__form-group">
+          <label for="support-message" class="support-popup__label">Message</label>
+          <div class="support-popup__textarea-wrapper">
+            <textarea
+              id="support-message"
+              name="message"
+              required
+              class="support-popup__textarea"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="support-popup__footer">
+        <button type="button" class="support-popup__btn support-popup__btn--secondary">
+          Close
+        </button>
+        <button type="submit" class="support-popup__btn support-popup__btn--primary">
+          Send Email
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

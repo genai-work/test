@@ -1,0 +1,289 @@
+$primary-blue: rgb(0, 136, 204);
+$secondary-gray: rgb(171, 183, 183);
+$dark-gray: rgb(74, 82, 95);
+$dark-text: rgb(14, 14, 14);
+$subtitle-text: rgb(80, 84, 88);
+$input-text: rgb(85, 85, 85);
+$border-light: rgb(221, 221, 221);
+$border-dark: rgb(118, 118, 118);
+$border-subtle: rgb(229, 229, 229);
+$background-light: rgb(254, 254, 254);
+$background-overlay: rgb(243, 243, 243);
+$white: rgb(255, 255, 255);
+$shadow-dark: rgba(0, 0, 0, 0.5);
+$border-semi: rgba(0, 0, 0, 0.2);
+
+.support-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.support-popup {
+  position: relative;
+  width: 600px;
+  background-color: $background-overlay;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition: transform 0.3s ease-out;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: $background-light;
+    border-bottom: 1px solid $border-subtle;
+    border-top: 4px solid $primary-blue;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+  }
+
+  &__close-btn {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 21px;
+    opacity: 0.2;
+    padding: 0;
+    text-shadow: rgb(255, 255, 255) 0 1px 0;
+
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+
+  &__title {
+    color: $dark-text;
+    font-family: 'Open Sans', Arial;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25.7143px;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+  }
+
+  &__success-message {
+    padding: 15px;
+    background-color: $background-light;
+    text-align: center;
+  }
+
+  &__error-message {
+    padding: 15px;
+    background-color: $background-light;
+    text-align: center;
+  }
+
+  &__message-content {
+    text-align: center;
+
+    strong {
+      display: inline;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  &__form {
+    background-color: $background-light;
+  }
+
+  &__form-body {
+    padding: 15px;
+    position: relative;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &__subtitle {
+    color: $subtitle-text;
+    font-family: 'Open Sans', Arial;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    margin: 10px 0;
+  }
+
+  &__description {
+    color: $input-text;
+    margin-bottom: 10px;
+  }
+
+  &__form-group {
+    display: flex;
+    margin-bottom: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    align-items: flex-start;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    cursor: default;
+    font-family: 'Open Sans';
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18.5714px;
+    max-width: 100%;
+    min-height: 1px;
+    padding: 7px 15px 0 15px;
+    position: relative;
+    text-align: right;
+    width: 16.6667%;
+    flex-shrink: 0;
+  }
+
+  &__input-wrapper {
+    flex: 1;
+    min-height: 1px;
+    padding: 0 15px;
+    position: relative;
+  }
+
+  &__input {
+    appearance: auto;
+    background-color: $white;
+    border: 1px solid $border-light;
+    border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0) 0 1px 1px 0 inset;
+    color: $input-text;
+    cursor: text;
+    font-size: 13px;
+    height: 34px;
+    line-height: 18.5714px;
+    padding: 6px 12px;
+    transition: background 0.2s linear;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__textarea-wrapper {
+    flex: 1;
+    min-height: 1px;
+    padding: 0 15px;
+    position: relative;
+  }
+
+  &__textarea {
+    appearance: auto;
+    background-color: $white;
+    border: 1px solid $border-dark;
+    border-radius: 0;
+    color: $input-text;
+    cursor: text;
+    display: inline-block;
+    height: 100px;
+    overflow-wrap: break-word;
+    overflow: auto;
+    padding: 2px;
+    resize: both;
+    transition: background 0.2s linear;
+    white-space: pre-wrap;
+    white-space-collapse: preserve;
+    width: 100%;
+    word-wrap: break-word;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 15px;
+    border-top: 1px solid $border-subtle;
+    background-color: $background-light;
+    border-radius: 0 0 8px 8px;
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  &__btn {
+    appearance: button;
+    border: 1px solid;
+    border-radius: 2px;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 12px;
+    text-align: center;
+    text-wrap: nowrap;
+    touch-action: manipulation;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.5;
+
+    &--secondary {
+      background-color: $secondary-gray;
+      border-color: $secondary-gray;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &--primary {
+      background-color: $dark-gray;
+      border-color: $dark-gray;
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .support-popup {
+    width: 90%;
+    max-width: 100%;
+  }
+
+  .support-popup__form-group {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .support-popup__label {
+    width: 100%;
+    text-align: left;
+    padding: 0 15px 5px 15px;
+  }
+
+  .support-popup__input-wrapper,
+  .support-popup__textarea-wrapper {
+    padding: 0 15px;
+  }
+}
