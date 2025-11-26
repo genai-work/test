@@ -3,64 +3,64 @@ import styles from './page.module.scss';
 export default function ContactPage() {
   return (
     <div className={styles['contact-page']}>
-      <header className="header">
-        <div className="header-container">
-          <button className="menu-button" aria-label="Open menu">
+      <header className={styles.header}>
+        <div className={styles['header-container']}>
+          <button className={styles['menu-button']} aria-label="Open menu">
             <svg width="12" height="15" viewBox="0 0 12 15" fill="none">
               <path d="M12 10.6133V11.6133C12 11.7487 11.9505 11.8659 11.8516 11.9648C11.7526 12.0638 11.6354 12.1133 11.5 12.1133H0.5C0.364583 12.1133 0.247396 12.0638 0.148438 11.9648C0.0494792 11.8659 0 11.7487 0 11.6133V10.6133C0 10.4779 0.0494792 10.3607 0.148438 10.2617C0.247396 10.1628 0.364583 10.1133 0.5 10.1133H11.5C11.6354 10.1133 11.7526 10.1628 11.8516 10.2617C11.9505 10.3607 12 10.4779 12 10.6133ZM12 6.61328V7.61328C12 7.7487 11.9505 7.86589 11.8516 7.96484C11.7526 8.0638 11.6354 8.11328 11.5 8.11328H0.5C0.364583 8.11328 0.247396 8.0638 0.148438 7.96484C0.0494792 7.86589 0 7.7487 0 7.61328V6.61328C0 6.47786 0.0494792 6.36068 0.148438 6.26172C0.247396 6.16276 0.364583 6.11328 0.5 6.11328H11.5C11.6354 6.11328 11.7526 6.16276 11.8516 6.26172C11.9505 6.36068 12 6.47786 12 6.61328ZM12 2.61328V3.61328C12 3.7487 11.9505 3.86589 11.8516 3.96484C11.7526 4.0638 11.6354 4.11328 11.5 4.11328H0.5C0.364583 4.11328 0.247396 4.0638 0.148438 3.96484C0.0494792 3.86589 0 3.7487 0 3.61328V2.61328C0 2.47786 0.0494792 2.36068 0.148438 2.26172C0.247396 2.16276 0.364583 2.11328 0.5 2.11328H11.5C11.6354 2.11328 11.7526 2.16276 11.8516 2.26172C11.9505 2.36068 12 2.47786 12 2.61328Z" fill="white"/>
             </svg>
           </button>
-          <div className="logo-wrapper">
+          <div className={styles['logo-wrapper']}>
             <img 
               src="https://api.builder.io/api/v1/image/assets/TEMP/f7168861ee65df665c892f8ca9ed27cd1afe2eec?width=164" 
               alt="COMLEX-USA" 
-              className="logo"
+              className={styles.logo}
             />
           </div>
-          <nav className="nav">
-            <ul className="nav-list">
-              <li className="nav-item">
-                <a href="#" className="nav-link">
+          <nav className={styles.nav}>
+            <ul className={styles['nav-list']}>
+              <li className={styles['nav-item']}>
+                <a href="#" className={styles['nav-link']}>
                   <svg width="5" height="13" viewBox="0 0 5 13" fill="none">
                     <path d="M4.21068 6.66721C4.25812 6.71465 4.28184 6.7692 4.28184 6.83087C4.28184 6.89254 4.25812 6.94709 4.21068 6.99453L0.894867 10.3103C0.84743 10.3578 0.792878 10.3815 0.731211 10.3815C0.669543 10.3815 0.614991 10.3578 0.567554 10.3103L0.21178 9.95457C0.164343 9.90713 0.140625 9.85258 0.140625 9.79091C0.140625 9.72925 0.164343 9.67469 0.21178 9.62726L3.00817 6.83087L0.21178 4.03448C0.164343 3.98705 0.140625 3.93249 0.140625 3.87083C0.140625 3.80916 0.164343 3.75461 0.21178 3.70717L0.567554 3.3514C0.614991 3.30396 0.669543 3.28024 0.731211 3.28024C0.792878 3.28024 0.84743 3.30396 0.894867 3.3514L4.21068 6.66721Z" fill="#999999"/>
                   </svg>
                   Blog
                 </a>
               </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link">
+              <li className={styles['nav-item']}>
+                <a href="#" className={styles['nav-link']}>
                   <svg width="5" height="13" viewBox="0 0 5 13" fill="none">
                     <path d="M4.20144 6.65289C4.24878 6.70023 4.27245 6.75466 4.27245 6.8162C4.27245 6.87773 4.24878 6.93217 4.20144 6.9795L0.892757 10.2882C0.845422 10.3355 0.790987 10.3592 0.729452 10.3592C0.667917 10.3592 0.613483 10.3355 0.566148 10.2882L0.211139 9.93318C0.163804 9.88585 0.140137 9.83141 0.140137 9.76988C0.140137 9.70834 0.163804 9.65391 0.211139 9.60657L3.00151 6.8162L0.211139 4.02582C0.163804 3.97849 0.140137 3.92406 0.140137 3.86252C0.140137 3.80099 0.163804 3.74655 0.211139 3.69922L0.566148 3.34421C0.613483 3.29687 0.667917 3.27321 0.729452 3.27321C0.790987 3.27321 0.845422 3.29687 0.892757 3.34421L4.20144 6.65289Z" fill="#999999"/>
                   </svg>
                   FAQ
                 </a>
               </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link">
+              <li className={styles['nav-item']}>
+                <a href="#" className={styles['nav-link']}>
                   <svg width="5" height="13" viewBox="0 0 5 13" fill="none">
                     <path d="M4.21068 6.66721C4.25812 6.71465 4.28184 6.7692 4.28184 6.83087C4.28184 6.89254 4.25812 6.94709 4.21068 6.99453L0.894867 10.3103C0.84743 10.3578 0.792878 10.3815 0.731211 10.3815C0.669543 10.3815 0.614991 10.3578 0.567554 10.3103L0.21178 9.95457C0.164343 9.90713 0.140625 9.85258 0.140625 9.79091C0.140625 9.72925 0.164343 9.67469 0.21178 9.62726L3.00817 6.83087L0.21178 4.03448C0.164343 3.98705 0.140625 3.93249 0.140625 3.87083C0.140625 3.80916 0.164343 3.75461 0.21178 3.70717L0.567554 3.3514C0.614991 3.30396 0.669543 3.28024 0.731211 3.28024C0.792878 3.28024 0.84743 3.30396 0.894867 3.3514L4.21068 6.66721Z" fill="#999999"/>
                   </svg>
                   Our Team
                 </a>
               </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link">
+              <li className={styles['nav-item']}>
+                <a href="#" className={styles['nav-link']}>
                   <svg width="5" height="13" viewBox="0 0 5 13" fill="none">
                     <path d="M4.21068 6.66721C4.25812 6.71465 4.28184 6.7692 4.28184 6.83087C4.28184 6.89254 4.25812 6.94709 4.21068 6.99453L0.894867 10.3103C0.84743 10.3578 0.792878 10.3815 0.731211 10.3815C0.669543 10.3815 0.614991 10.3578 0.567554 10.3103L0.21178 9.95457C0.164343 9.90713 0.140625 9.85258 0.140625 9.79091C0.140625 9.72925 0.164343 9.67469 0.21178 9.62726L3.00817 6.83087L0.21178 4.03448C0.164343 3.98705 0.140625 3.93249 0.140625 3.87083C0.140625 3.80916 0.164343 3.75461 0.21178 3.70717L0.567554 3.3514C0.614991 3.30396 0.669543 3.28024 0.731211 3.28024C0.792878 3.28024 0.84743 3.30396 0.894867 3.3514L4.21068 6.66721Z" fill="#999999"/>
                   </svg>
                   Institutional Accounts
                 </a>
               </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link">
+              <li className={styles['nav-item']}>
+                <a href="#" className={styles['nav-link']}>
                   <svg width="5" height="13" viewBox="0 0 5 13" fill="none">
                     <path d="M4.21068 6.66721C4.25812 6.71465 4.28184 6.7692 4.28184 6.83087C4.28184 6.89254 4.25812 6.94709 4.21068 6.99453L0.894867 10.3103C0.84743 10.3578 0.792878 10.3815 0.731211 10.3815C0.669543 10.3815 0.614991 10.3578 0.567554 10.3103L0.21178 9.95457C0.164343 9.90713 0.140625 9.85258 0.140625 9.79091C0.140625 9.72925 0.164343 9.67469 0.21178 9.62726L3.00817 6.83087L0.21178 4.03448C0.164343 3.98705 0.140625 3.93249 0.140625 3.87083C0.140625 3.80916 0.164343 3.75461 0.21178 3.70717L0.567554 3.3514C0.614991 3.30396 0.669543 3.28024 0.731211 3.28024C0.792878 3.28024 0.84743 3.30396 0.894867 3.3514L4.21068 6.66721Z" fill="#999999"/>
                   </svg>
                   Why COMQUEST?
                 </a>
               </li>
-              <li className="nav-item">
-                <a href="#" className="nav-link nav-link-active">
+              <li className={styles['nav-item']}>
+                <a href="#" className={`${styles['nav-link']} ${styles['nav-link-active']}`}>
                   <svg width="5" height="13" viewBox="0 0 5 13" fill="none">
                     <path d="M4.21068 6.66721C4.25812 6.71465 4.28184 6.7692 4.28184 6.83087C4.28184 6.89254 4.25812 6.94709 4.21068 6.99453L0.894867 10.3103C0.84743 10.3578 0.792878 10.3815 0.731211 10.3815C0.669543 10.3815 0.614991 10.3578 0.567554 10.3103L0.21178 9.95457C0.164343 9.90713 0.140625 9.85258 0.140625 9.79091C0.140625 9.72925 0.164343 9.67469 0.21178 9.62726L3.00817 6.83087L0.21178 4.03448C0.164343 3.98705 0.140625 3.93249 0.140625 3.87083C0.140625 3.80916 0.164343 3.75461 0.21178 3.70717L0.567554 3.3514C0.614991 3.30396 0.669543 3.28024 0.731211 3.28024C0.792878 3.28024 0.84743 3.30396 0.894867 3.3514L4.21068 6.66721Z" fill="#0088CC"/>
                   </svg>
@@ -72,44 +72,44 @@ export default function ContactPage() {
         </div>
       </header>
 
-      <main className="main">
-        <section className="hero-section">
-          <div className="hero-container">
-            <h1 className="page-title">Contact COMQUEST</h1>
-            <nav className="breadcrumb" aria-label="Breadcrumb">
-              <ul className="breadcrumb-list">
-                <li className="breadcrumb-item">
-                  <a href="#" className="breadcrumb-link">Home</a>
+      <main className={styles.main}>
+        <section className={styles['hero-section']}>
+          <div className={styles['hero-container']}>
+            <h1 className={styles['page-title']}>Contact COMQUEST</h1>
+            <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+              <ul className={styles['breadcrumb-list']}>
+                <li className={styles['breadcrumb-item']}>
+                  <a href="#" className={styles['breadcrumb-link']}>Home</a>
                 </li>
-                <li className="breadcrumb-separator">/ </li>
-                <li className="breadcrumb-item">
-                  <a href="#" className="breadcrumb-link">Contact Us</a>
+                <li className={styles['breadcrumb-separator']}>/ </li>
+                <li className={styles['breadcrumb-item']}>
+                  <a href="#" className={styles['breadcrumb-link']}>Contact Us</a>
                 </li>
               </ul>
             </nav>
           </div>
         </section>
 
-        <section className="map-section">
-          <div className="map-container">
-            <div className="map-info-card">
-              <div className="map-info-content">
-                <div className="map-address-title">18740 Ventura Blvd # 100</div>
-                <a href="#" className="map-link">View larger map</a>
+        <section className={styles['map-section']}>
+          <div className={styles['map-container']}>
+            <div className={styles['map-info-card']}>
+              <div className={styles['map-info-content']}>
+                <div className={styles['map-address-title']}>18740 Ventura Blvd # 100</div>
+                <a href="#" className={styles['map-link']}>View larger map</a>
               </div>
             </div>
-            <div className="map-embed">
-              <img src="https://api.builder.io/api/v1/image/assets/TEMP/8336017fedd18676da4ededfb2c52d3595296a88?width=512" alt="Map tile 1" className="map-tile" />
-              <img src="https://api.builder.io/api/v1/image/assets/TEMP/9d09181e0e98e445c3899839f0c00bc0b2f441a4?width=512" alt="Map tile 2" className="map-tile" />
-              <img src="https://api.builder.io/api/v1/image/assets/TEMP/ba395ed226fad80090e03aa049158df1031fadb6?width=512" alt="Map tile 3" className="map-tile" />
-              <img src="https://api.builder.io/api/v1/image/assets/TEMP/41b5f4287221b239f0683e84da3fa821222d9c72?width=512" alt="Map tile 4" className="map-tile" />
+            <div className={styles['map-embed']}>
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/8336017fedd18676da4ededfb2c52d3595296a88?width=512" alt="Map tile 1" className={styles['map-tile']} />
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/9d09181e0e98e445c3899839f0c00bc0b2f441a4?width=512" alt="Map tile 2" className={styles['map-tile']} />
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/ba395ed226fad80090e03aa049158df1031fadb6?width=512" alt="Map tile 3" className={styles['map-tile']} />
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/41b5f4287221b239f0683e84da3fa821222d9c72?width=512" alt="Map tile 4" className={styles['map-tile']} />
             </div>
-            <button className="map-control-btn" aria-label="Map controls">
+            <button className={styles['map-control-btn']} aria-label="Map controls">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                 <path d="M13.9999 22.3708L16.4791 19.8916L18.1416 21.525L13.9999 25.6666L9.85825 21.525L11.5208 19.8916L13.9999 22.3708ZM5.62909 14L8.10825 16.4791L6.47492 18.1416L2.33325 14L6.47492 9.85831L8.10825 11.5208L5.62909 14ZM22.3708 14L19.8916 11.5208L21.5249 9.85831L25.6666 14L21.5249 18.1416L19.8916 16.4791L22.3708 14ZM13.9999 5.62915L11.5208 8.10831L9.85825 6.47498L13.9999 2.33331L18.1416 6.47498L16.4791 8.10831L13.9999 5.62915Z" fill="#666666"/>
               </svg>
             </button>
-            <div className="map-logo">
+            <div className={styles['map-logo']}>
               <svg width="52" height="13" viewBox="0 0 52 13" fill="none">
                 <g opacity="0.6">
                   <path d="M13.1662 5.52613L13.574 5.11833L13.1581 4.71883C12.1305 3.73178 10.7452 2.97064 8.81793 2.97064C5.34094 2.97064 2.41016 5.80062 2.41016 9.2979C2.41016 12.7952 5.34094 15.6252 8.81793 15.6252C10.6797 15.6252 12.1162 15.0081 13.2441 13.8407C14.4269 12.6553 14.7676 11.0249 14.7676 9.76213C14.7676 9.36783 14.7345 8.98936 14.67 8.66719L14.5792 8.21283H8.25271V10.9215H11.8928C11.7629 11.3711 11.5671 11.6967 11.3282 11.936C10.8544 12.4043 10.1358 12.9227 8.81793 12.9227C6.81898 12.9227 5.24878 11.3166 5.24878 9.2979C5.24878 7.27923 6.81898 5.67311 8.81793 5.67311C9.90028 5.67311 10.6833 6.09567 11.2725 6.64701L11.6717 7.02061L12.0584 6.63398L13.1662 5.52613Z" fill="white" stroke="white" strokeWidth="1.13043"/>
@@ -126,77 +126,77 @@ export default function ContactPage() {
                 <path d="M47.8526 12.572L49.1152 13.4137C48.7067 14.0203 47.7227 15.06 46.0206 15.06C43.9102 15.06 42.3938 13.4323 42.3938 11.3527C42.3938 9.14938 43.9287 7.64545 45.8412 7.64545C47.7659 7.64545 48.7067 9.17417 49.0162 10.0035L49.1833 10.4244L44.2258 12.4792C44.6033 13.2219 45.1975 13.6056 46.0268 13.6056C46.8562 13.6056 47.4318 13.1909 47.8526 12.572ZM43.9597 11.2351L47.2771 9.86117C47.0914 9.39694 46.5467 9.07514 45.8969 9.07514C45.0675 9.07514 43.9163 9.80548 43.9597 11.2351Z" fill="#E94235"/>
               </svg>
             </div>
-            <div className="map-preview-marker">
-              <img src="https://api.builder.io/api/v1/image/assets/TEMP/205bbd8f4418d66c4fb8a796c79a140cfcd86eb8?width=512" alt="Map preview" className="map-preview-img" />
+            <div className={styles['map-preview-marker']}>
+              <img src="https://api.builder.io/api/v1/image/assets/TEMP/205bbd8f4418d66c4fb8a796c79a140cfcd86eb8?width=512" alt="Map preview" className={styles['map-preview-img']} />
             </div>
           </div>
         </section>
 
-        <section className="contact-section">
-          <div className="contact-container">
-            <h2 className="section-heading"><strong>Contact</strong> Us</h2>
-            <h4 className="section-subheading">Get in <strong>touch</strong></h4>
-            <p className="section-description">
+        <section className={styles['contact-section']}>
+          <div className={styles['contact-container']}>
+            <h2 className={styles['section-heading']}><strong>Contact</strong> Us</h2>
+            <h4 className={styles['section-subheading']}>Get in <strong>touch</strong></h4>
+            <p className={styles['section-description']}>
               Our support staff is here 7 days per week to help, or to
               listen to any suggestions you may have! We are always
               looking for ways to deliver an even better experience.
               Please feel encouraged to share your thoughts.
             </p>
 
-            <form className="contact-form">
-              <div className="form-group">
-                <label htmlFor="name" className="form-label">Your name *</label>
-                <input type="text" id="name" className="form-input" required />
+            <form className={styles['contact-form']}>
+              <div className={styles['form-group']}>
+                <label htmlFor="name" className={styles['form-label']}>Your name *</label>
+                <input type="text" id="name" className={styles['form-input']} required />
               </div>
-              <div className="form-group">
-                <label htmlFor="email" className="form-label">Your email address *</label>
+              <div className={styles['form-group']}>
+                <label htmlFor="email" className={styles['form-label']}>Your email address *</label>
                 <input 
                   type="email" 
                   id="email" 
-                  className="form-input" 
+                  className={styles['form-input']} 
                   placeholder="Registered email, if one exists" 
                   required 
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="subject" className="form-label">Subject *</label>
-                <input type="text" id="subject" className="form-input" required />
+              <div className={styles['form-group']}>
+                <label htmlFor="subject" className={styles['form-label']}>Subject *</label>
+                <input type="text" id="subject" className={styles['form-input']} required />
               </div>
-              <div className="form-group">
-                <label htmlFor="message" className="form-label">Message *</label>
-                <textarea id="message" className="form-textarea" required></textarea>
+              <div className={styles['form-group']}>
+                <label htmlFor="message" className={styles['form-label']}>Message *</label>
+                <textarea id="message" className={styles['form-textarea']} required></textarea>
               </div>
-              <button type="submit" className="submit-btn">Send Message</button>
+              <button type="submit" className={styles['submit-btn']}>Send Message</button>
             </form>
 
-            <div className="separator"></div>
+            <div className={styles.separator}></div>
 
             <h4 className="section-subheading">The <strong>Office</strong></h4>
-            <div className="office-info">
+            <div className={styles['office-info']}>
               <svg width="8" height="13" viewBox="0 0 8 13" fill="none">
                 <path d="M5.00281 5.84185C5.00281 5.84185 5.09176 5.75291 5.26964 5.57502C5.44753 5.39713 5.53647 5.05678 5.53647 4.55395C5.53647 4.05112 5.35859 3.62182 5.00281 3.26605C4.64704 2.91027 4.21774 2.73238 3.71491 2.73238C3.21208 2.73238 2.78278 2.91027 2.427 3.26605C2.07123 3.62182 1.89334 4.05112 1.89334 4.55395C1.89334 5.05678 2.07123 5.48608 2.427 5.84185C2.78278 6.19763 3.21208 6.37551 3.71491 6.37551C4.21774 6.37551 4.64704 6.19763 5.00281 5.84185ZM7.35804 4.55395C7.35804 5.07101 7.27977 5.49557 7.12323 5.82762L4.53319 11.335C4.45729 11.4916 4.34463 11.6149 4.1952 11.705C4.04578 11.7951 3.88568 11.8402 3.71491 11.8402C3.54414 11.8402 3.38404 11.7951 3.23461 11.705C3.08519 11.6149 2.9749 11.4916 2.90374 11.335L0.306589 5.82762C0.150048 5.49557 0.0717773 5.07101 0.0717773 4.55395C0.0717773 3.54829 0.427552 2.68969 1.1391 1.97814C1.85065 1.26659 2.70925 0.910818 3.71491 0.910818C4.72056 0.910818 5.57917 1.26659 6.29072 1.97814C7.00226 2.68969 7.35804 3.54829 7.35804 4.55395Z" fill="#777777"/>
               </svg>
               <p><strong>Address:</strong> 18740 Ventura Blvd #100 Tarzana, CA 91356</p>
             </div>
 
-            <div className="separator"></div>
+            <div className={styles.separator}></div>
 
             <h4 className="section-subheading">Business <strong>Hours</strong></h4>
-            <p className="business-hours">Monday - Sunday 7am to 7pm PST</p>
+            <p className={styles['business-hours']}>Monday - Sunday 7am to 7pm PST</p>
           </div>
         </section>
 
-        <section className="faq-section">
-          <div className="faq-container">
-            <h1 className="faq-heading"><strong>FAQs</strong></h1>
-            <div className="faq-list">
-              <div className="faq-item faq-item-active">
-                <button className="faq-question">
-                  <span className="faq-indicator"></span>
+        <section className={styles['faq-section']}>
+          <div className={styles['faq-container']}>
+            <h1 className={styles['faq-heading']}><strong>FAQs</strong></h1>
+            <div className={styles['faq-list']}>
+              <div className={`${styles['faq-item']} ${styles['faq-item-active']}`}>
+                <button className={styles['faq-question']}>
+                  <span className={styles['faq-indicator']}></span>
                   Can I buy now and activate the subscription
                   later?
                 </button>
-                <div className="faq-answer">
+                <div className={styles['faq-answer']}>
                   <p>
                     Yes. Your subscription starts once you create your first
                     exam. You can buy now and save your subscription for
@@ -204,34 +204,34 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
-              <div className="faq-item">
-                <button className="faq-question">
-                  <span className="faq-indicator"></span>
+              <div className={styles['faq-item']}>
+                <button className={styles['faq-question']}>
+                  <span className={styles['faq-indicator']}></span>
                   What do the Guaranteed Pass subscriptions
                   offer?
                 </button>
               </div>
-              <div className="faq-item">
-                <button className="faq-question">
-                  <span className="faq-indicator"></span>
+              <div className={styles['faq-item']}>
+                <button className={styles['faq-question']}>
+                  <span className={styles['faq-indicator']}></span>
                   Do you offer returns or refunds?
                 </button>
               </div>
-              <div className="faq-item">
-                <button className="faq-question">
-                  <span className="faq-indicator"></span>
+              <div className={styles['faq-item']}>
+                <button className={styles['faq-question']}>
+                  <span className={styles['faq-indicator']}></span>
                   Are there any discounts available?
                 </button>
               </div>
-              <div className="faq-item">
-                <button className="faq-question">
-                  <span className="faq-indicator"></span>
+              <div className={styles['faq-item']}>
+                <button className={styles['faq-question']}>
+                  <span className={styles['faq-indicator']}></span>
                   Can I reset my account/scores?
                 </button>
               </div>
-              <div className="faq-item">
-                <button className="faq-question">
-                  <span className="faq-indicator"></span>
+              <div className={styles['faq-item']}>
+                <button className={styles['faq-question']}>
+                  <span className={styles['faq-indicator']}></span>
                   How can I work for COMQUEST?
                 </button>
               </div>
@@ -239,69 +239,69 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="cta-section">
-          <h3 className="cta-heading">
+        <section className={styles['cta-section']}>
+          <h3 className={styles['cta-heading']}>
             COMQUEST is <strong>everything</strong> you<br />
             need to <strong>pass</strong> your COMLEX and<br />
             COMAT exams!
           </h3>
-          <div className="cta-arrow"></div>
+          <div className={styles['cta-arrow']}></div>
         </section>
       </main>
 
-      <footer className="footer">
-        <div className="footer-container">
-          <h4 className="footer-heading">Follow Us</h4>
-          <div className="social-links">
-            <a href="#" className="social-link social-facebook" aria-label="Facebook"></a>
-            <a href="#" className="social-link social-twitter" aria-label="Twitter"></a>
+      <footer className={styles.footer}>
+        <div className={styles['footer-container']}>
+          <h4 className={styles['footer-heading']}>Follow Us</h4>
+          <div className={styles['social-links']}>
+            <a href="#" className={`${styles['social-link']} ${styles['social-facebook']}`} aria-label="Facebook"></a>
+            <a href="#" className={`${styles['social-link']} ${styles['social-twitter']}`} aria-label="Twitter"></a>
           </div>
         </div>
-        <div className="footer-bottom">
-          <div className="footer-bottom-container">
+        <div className={styles['footer-bottom']}>
+          <div className={styles['footer-bottom-container']}>
             <img 
               src="https://api.builder.io/api/v1/image/assets/TEMP/1d519649ee952577a764f9b50488cd8e224f39a9?width=134" 
               alt="COMQUEST Osteopathic Specialists" 
-              className="footer-logo"
+              className={styles['footer-logo']}
             />
-            <div className="footer-info">
-              <p className="footer-copyright">
+            <div className={styles['footer-info']}>
+              <p className={styles['footer-copyright']}>
                 COMQUEST Osteopathic Specialists, LLC 2009-2026 © All rights
                 reserved
               </p>
-              <p className="footer-disclaimer">
+              <p className={styles['footer-disclaimer']}>
                 COMQUEST is in no way affiliated with the Comprehensive
                 Osteopathic Medical Licensing Examination (COMLEX-USA™),
                 Comprehensive Osteopathic Medical Achievement Test (COMAT
                 ®), National Board of Osteopathic Medical Examiners, (NBOME
                 ®), or The American Osteopathic Association (AOA ®).
               </p>
-              <p className="footer-disclaimer">
+              <p className={styles['footer-disclaimer']}>
                 The NBOME™ does not review, manage, or endorse any product
                 of COMQUEST. All exam names and other trademarks are the
                 property of the respective trademark owners.
               </p>
             </div>
-            <nav className="footer-nav">
-              <ul className="footer-nav-list">
-                <li className="footer-nav-item">
-                  <a href="#" className="footer-nav-link">FAQ's</a>
+            <nav className={styles['footer-nav']}>
+              <ul className={styles['footer-nav-list']}>
+                <li className={styles['footer-nav-item']}>
+                  <a href="#" className={styles['footer-nav-link']}>FAQ's</a>
                 </li>
-                <li className="footer-nav-separator">|</li>
-                <li className="footer-nav-item">
-                  <a href="#" className="footer-nav-link">Sitemap</a>
+                <li className={styles['footer-nav-separator']}>|</li>
+                <li className={styles['footer-nav-item']}>
+                  <a href="#" className={styles['footer-nav-link']}>Sitemap</a>
                 </li>
-                <li className="footer-nav-separator">|</li>
-                <li className="footer-nav-item">
-                  <a href="#" className="footer-nav-link">Terms & Conditions</a>
+                <li className={styles['footer-nav-separator']}>|</li>
+                <li className={styles['footer-nav-item']}>
+                  <a href="#" className={styles['footer-nav-link']}>Terms & Conditions</a>
                 </li>
-                <li className="footer-nav-separator">|</li>
-                <li className="footer-nav-item">
-                  <a href="#" className="footer-nav-link">Privacy</a>
+                <li className={styles['footer-nav-separator']}>|</li>
+                <li className={styles['footer-nav-item']}>
+                  <a href="#" className={styles['footer-nav-link']}>Privacy</a>
                 </li>
-                <li className="footer-nav-separator">|</li>
-                <li className="footer-nav-item">
-                  <a href="#" className="footer-nav-link">Contact</a>
+                <li className={styles['footer-nav-separator']}>|</li>
+                <li className={styles['footer-nav-item']}>
+                  <a href="#" className={styles['footer-nav-link']}>Contact</a>
                 </li>
               </ul>
             </nav>
