@@ -1,0 +1,429 @@
+// Color Variables
+$blue-primary: rgb(0, 136, 204);
+$green-accent: rgb(104, 195, 159);
+$gray-dark: rgb(80, 84, 88);
+$gray-darker: rgb(74, 82, 95);
+$gray-medium: rgb(171, 183, 183);
+$gray-light: rgb(51, 51, 51);
+$border-gray: rgba(0, 0, 0, 0.2);
+$border-light: rgb(229, 229, 229);
+$bg-light: rgb(243, 243, 243);
+$bg-white: rgb(254, 254, 254);
+$shadow-dark: rgba(0, 0, 0, 0.5);
+$white: rgb(255, 255, 255);
+
+// Typography
+$font-family: 'Open Sans', Arial, sans-serif;
+
+// ========================
+// Modal Container
+// ========================
+.promotionModal {
+  position: relative;
+  transition: transform 0.3s ease-out;
+  width: 1500px;
+  background-color: $bg-light;
+}
+
+.modalContainer {
+  background-color: $bg-white;
+  border: 1px solid $border-gray;
+  border-top: 4px solid $blue-primary;
+  border-radius: 8px;
+  box-shadow: $shadow-dark 0 5px 15px 0;
+  position: relative;
+}
+
+// ========================
+// Modal Header
+// ========================
+.modalHeader {
+  border-bottom: 1px solid $border-light;
+  padding: 15px;
+  position: relative;
+}
+
+.closeButton {
+  background-color: transparent;
+  border: none;
+  color: $gray-light;
+  cursor: pointer;
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  margin-top: -2px;
+  opacity: 0.2;
+  text-align: center;
+  text-shadow: $white 0 1px 0;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+.promoBanner {
+  color: $gray-light;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25.7143px;
+  margin: 10px 5px;
+  text-align: center;
+
+  b {
+    font-weight: 700;
+  }
+}
+
+.bannerMain,
+.bannerAlt {
+  display: inline;
+}
+
+.specialOfferTitle {
+  color: $gray-light;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25.7143px;
+  margin: 10px 5px;
+  text-align: center;
+}
+
+.comatOnlyTitle {
+  color: $gray-light;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25.7143px;
+  margin: 10px 5px;
+  text-align: center;
+
+  b {
+    font-weight: 700;
+  }
+}
+
+// ========================
+// Form Section
+// ========================
+.modalForm {
+  padding: 15px;
+}
+
+.formHeader {
+  position: relative;
+}
+
+.formTitle {
+  color: $gray-dark;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.level1Title,
+.level2Title,
+.bothLevelsTitle,
+.comatOnlyFormTitle {
+  display: none;
+
+  &:first-of-type {
+    display: block;
+  }
+}
+
+// ========================
+// Offerings Grid
+// ========================
+.offeringsGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -15px;
+  padding: 0;
+}
+
+.offeringCard {
+  float: left;
+  min-height: 1px;
+  padding: 15px;
+  position: relative;
+  width: 33.3333%;
+
+  &.level1Card,
+  &.level2Card,
+  &.level2Subscription,
+  &.comatBundle {
+    display: block;
+  }
+}
+
+.offeringTitle {
+  color: $gray-dark;
+  font-family: $font-family;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 43px;
+  margin: 10px 0;
+  text-align: center;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.offeringDescription {
+  color: $gray-light;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 10px;
+  text-align: left;
+
+  b {
+    font-weight: 700;
+  }
+}
+
+.offeringNote {
+  color: $gray-light;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 10px 0;
+  display: none;
+}
+
+.offeringFooter {
+  margin: 0 auto;
+  margin-top: -5px;
+  text-align: center;
+  width: 100%;
+}
+
+.price {
+  color: $gray-dark;
+  font-family: $font-family;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.priceAmount {
+  color: $green-accent;
+  font-family: $font-family;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+}
+
+.originalPrice {
+  color: $gray-dark;
+  font-family: $font-family;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 22px;
+  text-decoration: line-through;
+  text-align: center;
+  display: inline;
+  margin-right: 10px;
+}
+
+.discountedPrice {
+  color: $green-accent;
+  font-family: $font-family;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+  display: inline;
+}
+
+.offerLabel {
+  cursor: default;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18.5714px;
+  max-width: 100%;
+  padding-top: 7px;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.addToCartBtn {
+  appearance: button;
+  background-color: $green-accent;
+  border: 1px solid $green-accent;
+  border-radius: 2px;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 auto;
+  padding: 10px 16px;
+  text-align: center;
+  text-wrap: nowrap;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: darken($green-accent, 10%);
+    border-color: darken($green-accent, 10%);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.cartIcon {
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 18px;
+  line-height: 18px;
+  margin-right: 5px;
+  text-align: center;
+  text-wrap: nowrap;
+  user-select: none;
+  white-space: nowrap;
+}
+
+// ========================
+// Modal Footer
+// ========================
+.modalFooter {
+  border-top: 1px solid $border-light;
+  padding: 15px;
+  text-align: right;
+}
+
+.btn {
+  appearance: button;
+  border: 1px solid;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 12px;
+  text-align: center;
+  text-wrap: nowrap;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  margin-left: 5px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.btnSecondary {
+  background-color: $gray-medium;
+  border-color: $gray-medium;
+  color: $white;
+
+  &:hover {
+    background-color: darken($gray-medium, 10%);
+    border-color: darken($gray-medium, 10%);
+  }
+}
+
+.btnPrimary {
+  background-color: $green-accent;
+  border-color: $green-accent;
+  color: $white;
+
+  &:hover {
+    background-color: darken($green-accent, 10%);
+    border-color: darken($green-accent, 10%);
+  }
+}
+
+.btnSubmit {
+  background-color: $gray-darker;
+  border-color: $gray-darker;
+  color: $white;
+  display: none;
+
+  &:hover {
+    background-color: darken($gray-darker, 10%);
+    border-color: darken($gray-darker, 10%);
+  }
+}
+
+// ========================
+// Responsive Design
+// ========================
+@media (max-width: 1200px) {
+  .promotionModal {
+    width: 100%;
+  }
+
+  .offeringCard {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .offeringCard {
+    width: 100%;
+  }
+
+  .offeringTitle {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+  .originalPrice,
+  .discountedPrice {
+    font-size: 22px;
+  }
+
+  .modalFooter {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
